@@ -1,0 +1,6 @@
+use_frameworks!
+target 'SJTYNetWork_Tests' do
+  pod 'SJTYNetWork', :path => '../'
+  
+  
+end
