@@ -55,6 +55,15 @@ typedef enum : NSUInteger {
 -(void)apiUnLoginAdQueryWithPage:(API_ADTYPE)adType page:(NSInteger)page limit:(NSInteger)limit responseHandler:(ResponseHandler _Nonnull)responseHandler;
 
 
+
+/// 极光推送设置
+/// @param registrationId 从激光获取
+/// @param tag 产品id串_地区 (其中地区字符串中如果有空格需要用_代替，极光后台在tag有空格时会发送不出去)
+/// @param responseHandler 回调
+-(void)apiAdJpush:(NSString *)registrationId tag:(NSString *)tag responseHandler:(ResponseHandler _Nonnull)responseHandler;
+
+
+
 @end
 
 NS_ASSUME_NONNULL_END

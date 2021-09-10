@@ -98,4 +98,22 @@
     }];
 }
 
+
+
+/// 浏览指定网页
+/// @param htmlId 网页Id
+/// @param responseHandler 回调
+-(void)apiHtmlBrowse:(NSString *)htmlId  responseHandler:(ResponseHandler _Nonnull)responseHandler{
+    
+    SJTYRequest *request=[[SJTYRequest alloc] init];
+    request.apiUrl=[NSString stringWithFormat:@"/sjtyApi/app/see/addWithHtml?toId=%@",htmlId];
+    
+    [self postRequest:request responseHandler:^(NSError * _Nullable error, SJTYResponse * _Nullable response) {
+        responseHandler(error,response);
+    }];
+    
+}
+
+
+
 @end

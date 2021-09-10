@@ -21,7 +21,10 @@
 @implementation AdHtmlModel
 
 
-
++ (NSDictionary *)mj_replacedKeyFromPropertyName
+{
+    return @{@"htmlId":@"id"};
+}
 @end
 
 

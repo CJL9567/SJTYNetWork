@@ -31,10 +31,22 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param responseHandler 回调
 -(void)apiHtmlProcedures:(LANGUAGE)language responseHandler:(ResponseHandler _Nonnull)responseHandler;
 
+
+
 /// 获取用户手册
 /// @param language language 语言 默认英文  zh-CN 、en-US
 /// @param responseHandler 回调
 -(void)apiHtmlProtocol:(LANGUAGE)language responseHandler:(ResponseHandler _Nonnull)responseHandler;
+
+
+
+/// 浏览指定网页
+/// @param htmlId 网页Id
+/// @param responseHandler 回调
+-(void)apiHtmlBrowse:(NSString *)htmlId  responseHandler:(ResponseHandler _Nonnull)responseHandler;
+
+
+
 
 
 @end

@@ -11,6 +11,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @class ClientUserInfoModel;
 @interface ClientUserModel : SJTYBaseModel
+///用户Id
+@property(nonatomic,strong)NSString *userId;
 
 ///个性签名
 @property(nonatomic,copy)NSString *autograph;
@@ -53,6 +55,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 @interface  ClientUserInfoModel : SJTYBaseModel
+
+///用户Id
+@property(nonatomic,strong)NSString *userId;
 
 ///地址（市）
 @property(nonatomic,copy)NSString *address;

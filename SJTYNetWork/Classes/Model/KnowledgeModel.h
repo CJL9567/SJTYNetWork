@@ -133,7 +133,7 @@ NS_ASSUME_NONNULL_BEGIN
 ///知识类别名
 @property(nonatomic,copy)NSString *typeName;
 
-///类别ID
+///排序
 @property(assign,nonatomic)NSInteger seq;
 
 @end

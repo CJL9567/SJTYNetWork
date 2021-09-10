@@ -11,8 +11,6 @@
 #import <MJExtension.h>
 #import <CoreTelephony/CTCellularData.h>
 
-#define Host @"http://app.f-union.com"
-
 #import "SJTYBaseModel.h"
 
 @interface BaseApiClient()

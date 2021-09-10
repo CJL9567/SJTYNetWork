@@ -59,6 +59,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface AdHtmlModel : SJTYBaseModel
 
+///htmlId
+@property(nonatomic,copy)NSString *htmlId;
+
 ///创建时间
 @property(nonatomic,copy)NSString *createTime;
 

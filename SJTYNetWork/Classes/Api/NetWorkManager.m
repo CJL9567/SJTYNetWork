@@ -13,7 +13,20 @@
 #import "Define.h"
 #import "SJTYRequest.h"
 
+
+typedef void (^NetworkReachabilityStatusBlock)(NetworkReachabilityStatus status);
+
 @interface NetWorkManager()
+
+@property(nonatomic,strong)UserApiClient *userApi;
+@property(nonatomic,strong)AdApiClient *adApi;
+@property(nonatomic,strong)HtmlApiClient *htmlApi;
+@property(nonatomic,strong)FeedbackApiClient *feedBackApi;
+@property(nonatomic,strong)KnowledgeApiClient *knowledgeApi;
+@property(nonatomic,strong)LikeApiClient *likeApi;
+@property(nonatomic,strong)CommunityApiClient *communityApi;
+
+@property (readwrite, nonatomic, copy) NetworkReachabilityStatusBlock networkReachabilityStatusBlock;
 
 @end
 
@@ -34,50 +47,100 @@ static NetWorkManager *manager;
 
 -(void)loadNetwork{
     
-    [self loadHtml];
-    CTCellularData *cellularData = [[CTCellularData alloc]init];
-    cellularData.cellularDataRestrictionDidUpdateNotifier = ^(CTCellularDataRestrictedState state) {
-        //获取联网状态
-        switch (state) {
-            case kCTCellularDataRestricted:
-                NSLog(@"禁止");
-//                NSLog(@"");
-                break;
-            case kCTCellularDataNotRestricted:
-                NSLog(@"同意");
-                
-                break;
-            case kCTCellularDataRestrictedStateUnknown:
-                
-                break;
-            default:
-                break;
-        };
-    };
-}
-
--(void)loadHtml{
+    [[AFNetworkReachabilityManager sharedManager] setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
+        if (self.networkReachabilityStatusBlock) {
+            self.networkReachabilityStatusBlock((NetworkReachabilityStatus)status);
+        }
+        switch (status) {
+                case AFNetworkReachabilityStatusUnknown:
+                    NSLog(@"未识别的网络");
+                    break;
+                        
+                case AFNetworkReachabilityStatusNotReachable:
+                    NSLog(@"不可达的网络（未连接）");
+                    break;
+                        
+                case AFNetworkReachabilityStatusReachableViaWiFi:
+                    NSLog(@"WiFi网络");
+                    break;
+                        
+                case AFNetworkReachabilityStatusReachableViaWWAN:
+                    NSLog(@"移动网络");
+                    break;
+                        
+                default:
+                    break;
+            }
+    }];
     
-    NSURL *url = [NSURL URLWithString:@"http://www.baidu.com"];
-
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
-
-    NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration] delegate:nil delegateQueue:[NSOperationQueue mainQueue]];
-    
-    NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request];
-    [dataTask resume];
+    [[AFNetworkReachabilityManager sharedManager] startMonitoring];
     
 }
 
 
 
--(void)userCheckSeesionHandler:(ResponseHandler )responseHandler{
+///初始化各个Api Client
+-(void)setUpWithKey:(NSString *)key{
     
+    self.userApi=[[UserApiClient alloc] init];
+    self.userApi.prodcutID=key;
     
+    self.adApi=[[AdApiClient alloc] init];
+    self.adApi.prodcutID=key;
+    
+    self.htmlApi=[[HtmlApiClient alloc] init];
+    self.htmlApi.prodcutID=key;
+    
+    self.feedBackApi=[[FeedbackApiClient alloc] init];
+    self.feedBackApi.prodcutID=key;
+    
+    self.knowledgeApi=[[KnowledgeApiClient alloc] init];
+    self.knowledgeApi.prodcutID=key;
+    
+    self.likeApi=[[LikeApiClient alloc] init];
+    self.likeApi.prodcutID=key;
+    
+    self.communityApi=[[CommunityApiClient alloc] init];
+    self.communityApi.prodcutID=key;
     
 }
 
 
+- (void)setReachabilityStatusChangeBlock:(nullable void (^)(NetworkReachabilityStatus status))block{
+    self.networkReachabilityStatusBlock=block;
+}
+
+
+
+
+-(UserApiClient *)userApiClient{
+    return self.userApi;
+}
+
+
+-(AdApiClient *)adApiClient{
+    return self.adApi;
+}
+
+-(KnowledgeApiClient *)knowledgeApiClient{
+    return self.knowledgeApi;
+}
+
+- (HtmlApiClient *)htmlApiClient{
+    return self.htmlApi;
+}
+
+-(FeedbackApiClient *)feedBackApiClient{
+    return self.feedBackApi;
+}
+
+- (LikeApiClient *)likeApiClient{
+    return self.likeApi;
+}
+
+-(CommunityApiClient *)communityApiClient{
+    return self.communityApi;
+}
 
 
 

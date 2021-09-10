@@ -111,7 +111,14 @@
 -(void)apiUpdateUserInfo:(NSDictionary * _Nonnull)params responseHandler:(ResponseHandler _Nonnull )responseHandler;
 
 
+
+/// 上传文件
+/// @param fileArray 文件内容
+/// @param progressHandler 进度回调
+/// @param responseHandler 回调
 -(void)apiUploadFile:(NSArray <NSData *> * _Nonnull)fileArray progressHandler:(ProgressHandler _Nullable)progressHandler responseHandler:(ResponseHandler _Nonnull)responseHandler;
+
+
 
 
 @end

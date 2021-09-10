@@ -9,6 +9,10 @@
 
 @implementation KnowledgeApiClient
 
+
+/// 小知识类型
+/// @param language 语言类型
+/// @param responseHandler 回调
 -(void)apiKnowledgeApiQueryType:(LANGUAGE)language responseHandler:(ResponseHandler _Nonnull)responseHandler{
     NSString *lang=@"en-US";
     if (language==LANGUAGE_EN) {
@@ -30,11 +34,15 @@
     
 }
 
-
+/// 小知识列表
+/// @param knowledgeId 小知识分类ID
+/// @param limit limit
+/// @param newData 是否为新数据
+/// @param responseHandler 回调
 -(void)apiKnowledgeApiQueryList:(NSString *)knowledgeId limit:(NSInteger)limit newData:(Boolean)newData responseHandler:(ResponseHandler _Nonnull)responseHandler{
     
     SJTYRequest *request=[[SJTYRequest alloc] init];
-    request.apiUrl=[NSString stringWithFormat:@"/sjtyApi/app/tips/getTipsList?productId=%@&tipsTypeId=%@&limit=%ld&newOrOld=%d&needSeeAndTop=1",self.prodcutID,knowledgeId,limit,newData];
+    request.apiUrl=[NSString stringWithFormat:@"/sjtyApi/app/tips/getTipsList?productId=%@&tipsTypeId=%@&limit=%ld&newOrOld=%d&needSeeAndTop=1",self.prodcutID,knowledgeId,(long)limit,newData];
     request.mapClass=YES;
     request.responseMapClass=@"KnowledgePageModel";
     [self getRequest:request responseHandler:^(NSError * _Nullable error, SJTYResponse * _Nullable response) {

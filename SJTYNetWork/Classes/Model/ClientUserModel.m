@@ -12,7 +12,9 @@
 
 + (NSDictionary *)mj_replacedKeyFromPropertyName
 {
-    return @{@"clientUserInfo":@"clientUserInfo"};
+    return @{@"clientUserInfo":@"clientUserInfo",
+             @"userId":@"id"
+    };
 }
 
 @end
@@ -20,6 +22,11 @@
 
 @implementation ClientUserInfoModel
 
-
++ (NSDictionary *)mj_replacedKeyFromPropertyName
+{
+    return @{
+             @"userId":@"id"
+    };
+}
 
 @end
