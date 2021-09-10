@@ -8,7 +8,7 @@
 #import "BaseApiClient.h"
 
 #import <AFNetworking/AFNetworking.h>
-#import <MJExtension.h>
+#import <MJExtension/MJExtension.h>
 #import <CoreTelephony/CTCellularData.h>
 
 #import "SJTYBaseModel.h"
