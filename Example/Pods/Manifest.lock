@@ -1,0 +1,41 @@
+PODS:
+  - AFNetworking (4.0.1):
+    - AFNetworking/NSURLSession (= 4.0.1)
+    - AFNetworking/Reachability (= 4.0.1)
+    - AFNetworking/Security (= 4.0.1)
+    - AFNetworking/Serialization (= 4.0.1)
+    - AFNetworking/UIKit (= 4.0.1)
+  - AFNetworking/NSURLSession (4.0.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (4.0.1)
+  - AFNetworking/Security (4.0.1)
+  - AFNetworking/Serialization (4.0.1)
+  - AFNetworking/UIKit (4.0.1):
+    - AFNetworking/NSURLSession
+  - MJExtension (3.3.0)
+  - SJTYNetWork (0.1.0):
+    - AFNetworking (~> 4.0)
+    - MJExtension
+
+DEPENDENCIES:
+  - SJTYNetWork (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - AFNetworking
+    - MJExtension
+
+EXTERNAL SOURCES:
+  SJTYNetWork:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
+  MJExtension: 01704cca2b60a214c10761b6491eab74069d68a9
+  SJTYNetWork: a5eba129bb95cf5fc54d3d7f880ee48046155fba
+
+PODFILE CHECKSUM: 12abf9b40f945510894a5bfcdb6c3dd10ff322a9
+
+COCOAPODS: 1.9.1
