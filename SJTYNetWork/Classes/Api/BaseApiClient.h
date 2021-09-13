@@ -17,6 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 ///项目产品ID
 @property(nonatomic,copy)NSString *prodcutID;
 
+@property(nonatomic,copy)NSString *host;
 
 -(void)postRequest:(SJTYRequest *)request responseHandler:(ResponseHandler )responseHandler;
 

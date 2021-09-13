@@ -77,7 +77,17 @@ static NetWorkManager *manager;
     
 }
 
-
+-(void)setHost:(NSString *)host{
+    self.userApi.host=host;
+    self.adApi.host=host;
+    self.htmlApi.host=host;
+    self.feedBackApi.host=host;
+    self.knowledgeApi.host=host;
+    self.likeApi.host=host;
+    self.communityApi.host=host;
+    
+    
+}
 
 ///初始化各个Api Client
 -(void)setUpWithKey:(NSString *)key{

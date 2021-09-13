@@ -31,6 +31,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,strong)NSArray <NSData *>*fileArray;
 
 
+///文件下载保存的文件名
+@property(nonatomic,copy)NSString *fileName;
+
+
 @end
 
 NS_ASSUME_NONNULL_END

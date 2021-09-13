@@ -56,8 +56,13 @@ static BaseApiClient *apiClient;
     if (cookieStr!=nil) {
         [manager.requestSerializer setValue:cookieStr forHTTPHeaderField:@"Cookie"];
     }
-    
-    NSString *url=[[NSString stringWithFormat:@"%@%@",Host,request.apiUrl] stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
+    NSString *host=nil;
+    if (self.host==nil||[self.host isEqualToString:@""]) {
+        host=Host;
+    }else{
+        host=self.host;
+    }
+    NSString *url=[[NSString stringWithFormat:@"%@%@",host,request.apiUrl] stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
     
     [manager POST:url parameters:request.params headers:@{} progress:^(NSProgress * _Nonnull uploadProgress) {
             
@@ -108,7 +113,13 @@ static BaseApiClient *apiClient;
     if (cookieStr!=nil) {
         [manager.requestSerializer setValue:cookieStr forHTTPHeaderField:@"Cookie"];
     }
-    [manager GET:[NSString stringWithFormat:@"%@%@",Host,[request.apiUrl stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet  URLQueryAllowedCharacterSet]]] parameters:request.params headers:@{} progress:^(NSProgress * _Nonnull uploadProgress) {
+    NSString *host=nil;
+    if (self.host==nil||[self.host isEqualToString:@""]) {
+        host=Host;
+    }else{
+        host=self.host;
+    }
+    [manager GET:[NSString stringWithFormat:@"%@%@",host,[request.apiUrl stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet  URLQueryAllowedCharacterSet]]] parameters:request.params headers:@{} progress:^(NSProgress * _Nonnull uploadProgress) {
             
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSError *error=nil;
@@ -152,8 +163,13 @@ static BaseApiClient *apiClient;
     if (cookieStr!=nil) {
         [manager.requestSerializer setValue:cookieStr forHTTPHeaderField:@"Cookie"];
     }
-    
-    [manager PUT:[NSString stringWithFormat:@"%@%@",Host,[request.apiUrl stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet  URLQueryAllowedCharacterSet]]] parameters:request.params headers:@{} success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    NSString *host=nil;
+    if (self.host==nil||[self.host isEqualToString:@""]) {
+        host=Host;
+    }else{
+        host=self.host;
+    }
+    [manager PUT:[NSString stringWithFormat:@"%@%@",host,[request.apiUrl stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet  URLQueryAllowedCharacterSet]]] parameters:request.params headers:@{} success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSError *error=nil;
         SJTYResponse *response= [SJTYResponse mj_objectWithKeyValues:responseObject];
         if (request.mapClass&&request.responseMapClass) {
@@ -161,8 +177,6 @@ static BaseApiClient *apiClient;
             response.responseObj=baseModel;
             
         }
-        
-        
         if (!request.mapClass&&request.responseMapClass) {
             NSArray *dataArray=    [NSClassFromString(request.responseMapClass) mj_objectArrayWithKeyValuesArray:response.data];
             response.responseObj=dataArray;
@@ -198,7 +212,13 @@ static BaseApiClient *apiClient;
     if (cookieStr!=nil) {
         [manager.requestSerializer setValue:cookieStr forHTTPHeaderField:@"Cookie"];
     }
-    [manager POST:[NSString stringWithFormat:@"%@%@",Host,[request.apiUrl stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet  URLQueryAllowedCharacterSet]]] parameters:request.params headers:@{} constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+    NSString *host=nil;
+    if (self.host==nil||[self.host isEqualToString:@""]) {
+        host=Host;
+    }else{
+        host=self.host;
+    }
+    [manager POST:[NSString stringWithFormat:@"%@%@",host,[request.apiUrl stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet  URLQueryAllowedCharacterSet]]] parameters:request.params headers:@{} constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
         NSDate *date = [NSDate date];
 
         NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
@@ -226,6 +246,46 @@ static BaseApiClient *apiClient;
         responseHandler(error,response);
     }];
     
+}
+
+
+
+-(void)putDownloadFile:(SJTYRequest *)request progressHandler:(ProgressHandler)progressHandler responseHandler:(ResponseHandler )responseHandler{
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.requestSerializer = [AFHTTPRequestSerializer serializer];
+    [manager.requestSerializer willChangeValueForKey:@"timeoutInterval"];
+    manager.requestSerializer.timeoutInterval = request.timeoutInterval;
+    [manager.requestSerializer didChangeValueForKey:@"timeoutInterval"];
+    manager.responseSerializer = [AFJSONResponseSerializer serializer];
+
+    NSString *cookieStr = [NSString stringWithFormat:@"JSESSIONID=%@",[[NSUserDefaults standardUserDefaults] valueForKey:@"Cookie"]];
+    if (cookieStr!=nil) {
+        [manager.requestSerializer setValue:cookieStr forHTTPHeaderField:@"Cookie"];
+    }
+    NSString *host=nil;
+    if (self.host==nil||[self.host isEqualToString:@""]) {
+        host=Host;
+    }else{
+        host=self.host;
+    }
+    
+    NSURLRequest *urlRequest=[[NSURLRequest alloc] initWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",host,[request.apiUrl stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet  URLQueryAllowedCharacterSet]]]]];
+    
+    [manager downloadTaskWithRequest:urlRequest progress:^(NSProgress * _Nonnull downloadProgress) {
+//        NSLog(@"%.2f",downloadProgress.fractionCompleted);
+        progressHandler(downloadProgress);
+    } destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
+        NSString *filePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/Download/%@",request.fileName]];
+                
+        NSURL *url=[NSURL URLWithString:filePath];
+        return url;
+    } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
+
+        SJTYResponse *sjtyResponse= [[SJTYResponse alloc] init];
+        sjtyResponse.status=200;
+        sjtyResponse.data=filePath;
+        responseHandler(error,sjtyResponse);
+    }];
 }
 
 @end
