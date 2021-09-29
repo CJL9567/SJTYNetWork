@@ -225,6 +225,10 @@
     request.apiUrl=[NSString stringWithFormat:@"/sjtyApi/app/logout"];
     
     [self postRequest:request responseHandler:^(NSError * _Nullable error, SJTYResponse * _Nullable response) {
+        if (response.status==202) {
+            [[NSUserDefaults standardUserDefaults] setValue:@"" forKey:@"Cookie"];
+            [[NSUserDefaults standardUserDefaults] synchronize];
+        }
         responseHandler(error,response);
     }];
 }
