@@ -8,7 +8,7 @@
 #import "NetWorkManager.h"
 #import <AFNetworking/AFNetworking.h>
 #import <CoreTelephony/CTCellularData.h>
-
+#import "AppApiClient.h"
 
 #import "Define.h"
 #import "SJTYRequest.h"
@@ -25,7 +25,7 @@ typedef void (^NetworkReachabilityStatusBlock)(NetworkReachabilityStatus status)
 @property(nonatomic,strong)KnowledgeApiClient *knowledgeApi;
 @property(nonatomic,strong)LikeApiClient *likeApi;
 @property(nonatomic,strong)CommunityApiClient *communityApi;
-
+@property(nonatomic,strong)AppApiClient *appApiClient;
 @property (readwrite, nonatomic, copy) NetworkReachabilityStatusBlock networkReachabilityStatusBlock;
 
 @end
@@ -113,6 +113,18 @@ static NetWorkManager *manager;
     self.communityApi=[[CommunityApiClient alloc] init];
     self.communityApi.prodcutID=key;
     
+    
+    self.appApiClient=[[AppApiClient alloc] init];
+    self.appApiClient.prodcutID=key;
+    
+    [self.appApiClient apiAppEnable:key responseHandler:^(NSError * _Nullable error, SJTYResponse * _Nullable response) {
+        if (response.status==200) {
+            NSNumber *enable=response.data;
+//            Boolean es=[enable boolValue];
+            self.appEnableBlock([enable boolValue]);
+        }
+       
+    }];
 }
 
 

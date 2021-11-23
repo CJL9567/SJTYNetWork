@@ -23,6 +23,9 @@ typedef NS_ENUM(NSInteger, NetworkReachabilityStatus) {
     NetworkReachabilityStatusReachableViaWiFi = 2,
 };
 
+
+typedef void(^AppEnableBlock)(Boolean  enable);
+
 NS_ASSUME_NONNULL_BEGIN
 
 @class ClientUserModel;
@@ -52,6 +55,7 @@ NS_ASSUME_NONNULL_BEGIN
 ///用户
 @property(nonatomic,strong)ClientUserModel *clientUser;
 
+@property(nonatomic,strong)AppEnableBlock appEnableBlock;
 
 +(instancetype)sharedInstance;
 
