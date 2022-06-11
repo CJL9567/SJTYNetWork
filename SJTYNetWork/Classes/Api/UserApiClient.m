@@ -208,7 +208,7 @@
 /// @param responseHandler 回调
 -(void)apiUpdatePwd:(NSString * _Nonnull)contactKey password:(NSString * _Nonnull )password code:(NSString * _Nonnull)code responseHandler:(ResponseHandler _Nonnull )responseHandler{
     SJTYRequest *request=[[SJTYRequest alloc] init];
-    request.apiUrl=[NSString stringWithFormat:@"/sjtyApi/app/updatePwdByCode?contactKey=%@&productId=%@&password=%@&code=%@",contactKey,self.prodcutID,password,code];
+    request.apiUrl=[NSString stringWithFormat:@"/sjtyApi/app/updatePwdByCode?contactKey=%@&productId=%@&newPwd=%@&code=%@",contactKey,self.prodcutID,password,code];
     
     [self postRequest:request responseHandler:^(NSError * _Nullable error, SJTYResponse * _Nullable response) {
         responseHandler(error,response);
@@ -233,6 +233,20 @@
     }];
 }
 
+
+-(void)apiDeleteAccount:(ResponseHandler _Nonnull )responseHandler{
+    
+    SJTYRequest *request=[[SJTYRequest alloc] init];
+    request.apiUrl=[NSString stringWithFormat:@"/sjtyApi/app/clientUser/deleteSelf"];
+    
+    [self postRequest:request responseHandler:^(NSError * _Nullable error, SJTYResponse * _Nullable response) {
+        if (response.status==200) {
+            [[NSUserDefaults standardUserDefaults] setValue:@"" forKey:@"Cookie"];
+            [[NSUserDefaults standardUserDefaults] synchronize];
+        }
+        responseHandler(error,response);
+    }];
+}
 
 
 /// 上传用户位置信息,用于后台进行数据统计或按区域推送消息

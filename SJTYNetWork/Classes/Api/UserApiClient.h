@@ -91,6 +91,11 @@
 
 
 
+/// 删除账号
+/// @param responseHandler 回调
+-(void)apiDeleteAccount:(ResponseHandler _Nonnull )responseHandler;
+
+
 /// 上传用户位置信息,用于后台进行数据统计或按区域推送消息
 /// @param longitude 经度
 /// @param latitude 纬度
