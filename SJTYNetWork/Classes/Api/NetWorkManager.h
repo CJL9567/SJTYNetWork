@@ -14,7 +14,8 @@
 #import "LikeApiClient.h"
 #import "CommunityApiClient.h"
 #import "FeedbackApiClient.h"
-
+#import "AppApiClient.h"
+#import "OTAApiClient.h"
 
 typedef NS_ENUM(NSInteger, NetworkReachabilityStatus) {
     NetworkReachabilityStatusUnknown          = -1,
@@ -30,6 +31,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @class ClientUserModel;
 @interface NetWorkManager : NSObject
+
+///app基础Api
+@property(nonatomic,strong,readonly)AppApiClient *appApiClient;
 
 ///用户Api
 @property(nonatomic,strong,readonly)UserApiClient *userApiClient;
@@ -51,6 +55,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 ///社群Api
 @property(nonatomic,strong,readonly)CommunityApiClient *communityApiClient;
+
+///OTAApi
+@property(nonatomic,strong,readonly)OTAApiClient *otaApiClient;
 
 ///用户
 @property(nonatomic,strong)ClientUserModel *clientUser;

@@ -26,6 +26,7 @@ NS_ASSUME_NONNULL_BEGIN
 -(void)putRequest:(SJTYRequest *)request responseHandler:(ResponseHandler )responseHandler;
 
 -(void)postUploadFile:(SJTYRequest *)request progressHandler:(ProgressHandler)progressHandler responseHandler:(ResponseHandler )responseHandler;
+-(void)downloadFile:(SJTYRequest *)request progressHandler:(ProgressHandler)progressHandler responseHandler:(ResponseHandler )responseHandler;
 
 
 @end

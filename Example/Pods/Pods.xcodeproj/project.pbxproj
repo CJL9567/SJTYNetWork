@@ -60,6 +60,10 @@
 		687EE835F3FF12FA9451879044DCF247 /* MJExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E7BBD108CFE897E60E79E74F844693D /* MJExtension.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		69F117D8EEA40361E2EED6CF7626E9D5 /* AFAutoPurgingImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9FC9D45A246C89D9801794E0047081 /* AFAutoPurgingImageCache.m */; };
 		6BD75A9F9995A4296215C4964504F4EF /* AdDataModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 5270371ACDAFB6B66A56B27EB4E0E5B9 /* AdDataModel.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		738879F7287E55C300BED0EF /* OTAApiClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 738879F5287E55C300BED0EF /* OTAApiClient.h */; };
+		738879F8287E55C300BED0EF /* OTAApiClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 738879F6287E55C300BED0EF /* OTAApiClient.m */; };
+		738879FB287E55D100BED0EF /* OTAModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 738879F9287E55D100BED0EF /* OTAModel.h */; };
+		738879FC287E55D100BED0EF /* OTAModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 738879FA287E55D100BED0EF /* OTAModel.m */; };
 		7424810570E945330CB2642C6BDAE6FD /* NSObject+MJCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = F06F67FE7A8C7D54DC8CF34F706E02C9 /* NSObject+MJCoding.m */; };
 		743C79425F8BC9AF5CD616590D186F54 /* UIRefreshControl+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F98AB67DEFF7646C8272639794B2876 /* UIRefreshControl+AFNetworking.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		75E3680F654F2F8FA4BE743961254C30 /* NSObject+MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = A11286AFC5BC3211ED1B06A30B7BEDD9 /* NSObject+MJProperty.m */; };
@@ -153,7 +157,7 @@
 		0EE9EC13DE6959E0184331BDE44F6DE3 /* AdDataModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AdDataModel.m; sourceTree = "<group>"; };
 		15A843FF3BE83BCD03FB178D5B66E821 /* AFNetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFNetworkActivityIndicatorManager.m; path = "UIKit+AFNetworking/AFNetworkActivityIndicatorManager.m"; sourceTree = "<group>"; };
 		17C8F743F2FD7373EFC5B363744656EA /* SJTYResponse.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SJTYResponse.m; sourceTree = "<group>"; };
-		1BC922A5ABD18B8579A5257FCB603059 /* SJTYNetWork.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = SJTYNetWork.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		1BC922A5ABD18B8579A5257FCB603059 /* SJTYNetWork.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = SJTYNetWork.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		1C3B9218A4281A99B0EE306DF220A76F /* UIProgressView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIProgressView+AFNetworking.h"; path = "UIKit+AFNetworking/UIProgressView+AFNetworking.h"; sourceTree = "<group>"; };
 		1C8213093D4B8D38FE0321FBEF06CD6F /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLResponseSerialization.h; path = AFNetworking/AFURLResponseSerialization.h; sourceTree = "<group>"; };
 		1D26BA06C5913850488866C7BBD74A44 /* SJTYRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SJTYRequest.m; sourceTree = "<group>"; };
@@ -178,11 +182,11 @@
 		4E0EF08369CF0B0E2BB0099690582EE8 /* NetWorkManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = NetWorkManager.h; sourceTree = "<group>"; };
 		5270371ACDAFB6B66A56B27EB4E0E5B9 /* AdDataModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AdDataModel.h; sourceTree = "<group>"; };
 		52AF2362A2C0EC733413A824ED6B8BA0 /* Pods-SJTYNetWork_Tests */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "Pods-SJTYNetWork_Tests"; path = "libPods-SJTYNetWork_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		53C87B94BA9B6B17A18C32FB26239834 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		53C87B94BA9B6B17A18C32FB26239834 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		568771C68246936B52A0D0CBDF82B333 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFURLResponseSerialization.m; path = AFNetworking/AFURLResponseSerialization.m; sourceTree = "<group>"; };
 		598B3E0851C6335E4CF4E65F8D30030E /* LikeApiClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LikeApiClient.h; sourceTree = "<group>"; };
 		599F2AB383BCFBDFA9CE0D26BF1F5743 /* CommunityApiClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CommunityApiClient.h; sourceTree = "<group>"; };
-		59D349B6ED4B232AAEDD9D6CBBADCF0B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		59D349B6ED4B232AAEDD9D6CBBADCF0B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		59F66FAAB9A81A6D9958FCFC2B06A903 /* LikeApiClient.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LikeApiClient.m; sourceTree = "<group>"; };
 		5B8C18333EC65FE93EF9F42D248DAEC1 /* Pods-SJTYNetWork_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SJTYNetWork_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		5EEA6F97A6B8A5786BA502BC400B3EED /* AFSecurityPolicy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFSecurityPolicy.m; path = AFNetworking/AFSecurityPolicy.m; sourceTree = "<group>"; };
@@ -200,6 +204,10 @@
 		6E4F2D09CF46A37CF43A9ACE16BD456B /* BaseApiClient.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = BaseApiClient.m; sourceTree = "<group>"; };
 		7082013445FBA786A488984B5BB3D00C /* UIProgressView+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIProgressView+AFNetworking.m"; path = "UIKit+AFNetworking/UIProgressView+AFNetworking.m"; sourceTree = "<group>"; };
 		71372E38790A92E78CFA07409FDFD5A2 /* FeedbackModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FeedbackModel.h; sourceTree = "<group>"; };
+		738879F5287E55C300BED0EF /* OTAApiClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTAApiClient.h; sourceTree = "<group>"; };
+		738879F6287E55C300BED0EF /* OTAApiClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTAApiClient.m; sourceTree = "<group>"; };
+		738879F9287E55D100BED0EF /* OTAModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTAModel.h; sourceTree = "<group>"; };
+		738879FA287E55D100BED0EF /* OTAModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTAModel.m; sourceTree = "<group>"; };
 		749A9E1F69C8AD665DEB86E76751F9D8 /* UIKit+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIKit+AFNetworking.h"; path = "UIKit+AFNetworking/UIKit+AFNetworking.h"; sourceTree = "<group>"; };
 		7549984759FDE490EA373B18D2304C4F /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFURLRequestSerialization.m; path = AFNetworking/AFURLRequestSerialization.m; sourceTree = "<group>"; };
 		76528C8F8AAC5B74E7A09774050F94C7 /* NSObject+MJClass.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+MJClass.m"; path = "MJExtension/NSObject+MJClass.m"; sourceTree = "<group>"; };
@@ -218,7 +226,7 @@
 		972EB2DBD64AFF18C564659887A561FE /* MJProperty.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJProperty.h; path = MJExtension/MJProperty.h; sourceTree = "<group>"; };
 		99C64AC09B6FEC5CDE86B5EC28070311 /* AFCompatibilityMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFCompatibilityMacros.h; path = AFNetworking/AFCompatibilityMacros.h; sourceTree = "<group>"; };
 		9BDDA08B69D7F5FE445E2890778E9950 /* MJPropertyType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJPropertyType.h; path = MJExtension/MJPropertyType.h; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9E33C8C24D9865B840D61EC20AAF1B29 /* HtmlApiClient.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HtmlApiClient.m; sourceTree = "<group>"; };
 		9E7BBD108CFE897E60E79E74F844693D /* MJExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJExtension.h; path = MJExtension/MJExtension.h; sourceTree = "<group>"; };
 		9F11EE27DD7C656D272E7E2A4BB4208D /* KnowledgeApiClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KnowledgeApiClient.h; sourceTree = "<group>"; };
@@ -322,7 +330,6 @@
 				2D381485ED21A0545EE2B84493D4E571 /* Support Files */,
 				C345E53E53D5BB0D44622785CE93FB18 /* UIKit */,
 			);
-			name = AFNetworking;
 			path = AFNetworking;
 			sourceTree = "<group>";
 		};
@@ -396,7 +403,6 @@
 				42403114F550C02B6612C2A151139989 /* NSString+MJExtension.m */,
 				E1626C8C9FBC259448413201FF988291 /* Support Files */,
 			);
-			name = MJExtension;
 			path = MJExtension;
 			sourceTree = "<group>";
 		};
@@ -451,6 +457,8 @@
 				17C8F743F2FD7373EFC5B363744656EA /* SJTYResponse.m */,
 				3E8C437C78D9FE59918C6046C0AB8FC2 /* UserApiClient.h */,
 				465D28BF13574874EE71BDBBE8164504 /* UserApiClient.m */,
+				738879F5287E55C300BED0EF /* OTAApiClient.h */,
+				738879F6287E55C300BED0EF /* OTAApiClient.m */,
 			);
 			name = Api;
 			path = SJTYNetWork/Classes/Api;
@@ -545,6 +553,8 @@
 		C94C612C9CD431006C8F993911A68EA1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				738879F9287E55D100BED0EF /* OTAModel.h */,
+				738879FA287E55D100BED0EF /* OTAModel.m */,
 				5270371ACDAFB6B66A56B27EB4E0E5B9 /* AdDataModel.h */,
 				0EE9EC13DE6959E0184331BDE44F6DE3 /* AdDataModel.m */,
 				A39FDA5C282F0CA7FD776FBE5A5BF351 /* ClientUserModel.h */,
@@ -655,12 +665,14 @@
 				ECE39BDD35CAED0AF85B981C20E2D5A0 /* AppApiClient.h in Headers */,
 				DD266F5FA3ED8BA35E98B8ED8A00B9E8 /* BaseApiClient.h in Headers */,
 				38DA66FB04EDD68309FFD49EEDD22D93 /* ClientUserModel.h in Headers */,
+				738879FB287E55D100BED0EF /* OTAModel.h in Headers */,
 				57CFD5543D7B728623C7307014AB13D7 /* CommunityApiClient.h in Headers */,
 				F35DBDE3AF102175164BB440F9D8E6E5 /* CommunityModel.h in Headers */,
 				2B9F6335F7F67E910FC57963756B85E9 /* Define.h in Headers */,
 				4E1CF37C48C8B5C8FC2F4F72EDAEA72B /* FeedbackApiClient.h in Headers */,
 				D393D52EA2936CFE8B7B0AF3790C0F78 /* FeedbackModel.h in Headers */,
 				43E3E0A59F601ECBF4DB9EFA97ED96B3 /* HtmlApiClient.h in Headers */,
+				738879F7287E55C300BED0EF /* OTAApiClient.h in Headers */,
 				1C50F4F02E83AFA80ACEC15188D7EB70 /* KnowledgeApiClient.h in Headers */,
 				028D3BD1EBC380ADD87A3B5018BF08E6 /* KnowledgeModel.h in Headers */,
 				DBF3D0DAEF2FCA9A21A1A3A3D7625737 /* LikeApiClient.h in Headers */,
@@ -846,6 +858,8 @@
 				5EDBDA4839A94893337B6DD103DE995D /* SJTYRequest.m in Sources */,
 				2B4312E920811AA7A72A61575111C2F9 /* SJTYResponse.m in Sources */,
 				31756F163F10C17DE8292B97C9F43398 /* UserApiClient.m in Sources */,
+				738879FC287E55D100BED0EF /* OTAModel.m in Sources */,
+				738879F8287E55C300BED0EF /* OTAApiClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -992,8 +1006,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};

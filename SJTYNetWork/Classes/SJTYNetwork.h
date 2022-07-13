@@ -16,7 +16,7 @@
 #import "FeedbackModel.h"
 #import "KnowledgeModel.h"
 #import "SJTYBaseModel.h"
-
+#import "OTAModel.h"
 #import "SJTYRequest.h"
 #import "SJTYResponse.h"
 

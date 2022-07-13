@@ -8,8 +8,6 @@
 #import "NetWorkManager.h"
 #import <AFNetworking/AFNetworking.h>
 #import <CoreTelephony/CTCellularData.h>
-#import "AppApiClient.h"
-
 #import "Define.h"
 #import "SJTYRequest.h"
 
@@ -17,7 +15,7 @@
 typedef void (^NetworkReachabilityStatusBlock)(NetworkReachabilityStatus status);
 
 @interface NetWorkManager()
-
+@property(nonatomic,strong)AppApiClient *appApi;
 @property(nonatomic,strong)UserApiClient *userApi;
 @property(nonatomic,strong)AdApiClient *adApi;
 @property(nonatomic,strong)HtmlApiClient *htmlApi;
@@ -25,7 +23,8 @@ typedef void (^NetworkReachabilityStatusBlock)(NetworkReachabilityStatus status)
 @property(nonatomic,strong)KnowledgeApiClient *knowledgeApi;
 @property(nonatomic,strong)LikeApiClient *likeApi;
 @property(nonatomic,strong)CommunityApiClient *communityApi;
-@property(nonatomic,strong)AppApiClient *appApiClient;
+
+@property(nonatomic,strong)OTAApiClient *otaApi;
 @property (readwrite, nonatomic, copy) NetworkReachabilityStatusBlock networkReachabilityStatusBlock;
 
 @end
@@ -85,7 +84,8 @@ static NetWorkManager *manager;
     self.knowledgeApi.host=host;
     self.likeApi.host=host;
     self.communityApi.host=host;
-    
+    self.otaApi.host=host;
+    self.appApi.host=host;
     
 }
 
@@ -114,13 +114,17 @@ static NetWorkManager *manager;
     self.communityApi.prodcutID=key;
     
     
-    self.appApiClient=[[AppApiClient alloc] init];
-    self.appApiClient.prodcutID=key;
+    self.appApi=[[AppApiClient alloc] init];
+    self.appApi.prodcutID=key;
     
-    [self.appApiClient apiAppEnable:key responseHandler:^(NSError * _Nullable error, SJTYResponse * _Nullable response) {
+    self.otaApi=[[OTAApiClient alloc] init];
+    self.otaApi.prodcutID=key;
+    
+    
+    [self.appApi apiAppEnable:key responseHandler:^(NSError * _Nullable error, SJTYResponse * _Nullable response) {
         if (response.status==200) {
             NSNumber *enable=response.data;
-//            Boolean es=[enable boolValue];
+            
             self.appEnableBlock([enable boolValue]);
         }
        
@@ -165,6 +169,13 @@ static NetWorkManager *manager;
 }
 
 
+-(OTAApiClient *)otaApiClient{
+    return self.otaApi;
+}
+
+-(AppApiClient *)appApiClient{
+    return self.appApi;
+}
 
 
 @end
