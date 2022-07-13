@@ -36,7 +36,7 @@
     
     
     AppApiClient *apiClient=[[AppApiClient alloc] init];
-    apiClient.prodcutID=@"1";
+    apiClient.prodcutID=@"1523949849220091906";
     [apiClient apiAppEnable:@"1" responseHandler:^(NSError * _Nullable error, SJTYResponse * _Nullable response) {
         NSLog(@"");
     }];

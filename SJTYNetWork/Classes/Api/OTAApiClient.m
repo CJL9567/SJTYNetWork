@@ -18,7 +18,7 @@
     request.apiUrl=[NSString stringWithFormat:@"/sjtyApi/app/ota/list?productId=%@&productSub=%@",self.prodcutID,productSub];
     request.mapClass=NO;
     request.responseMapClass=@"OTAModel";
-    [self postRequest:request responseHandler:^(NSError * _Nullable error, SJTYResponse * _Nullable response) {
+    [self getRequest:request responseHandler:^(NSError * _Nullable error, SJTYResponse * _Nullable response) {
         responseHandler(error,response);
     }];
     
@@ -34,7 +34,7 @@
     request.apiUrl=[NSString stringWithFormat:@"/sjtyApi/app/ota/last?productId=%@&productSub=%@",self.prodcutID,productSub];
     request.mapClass=YES;
     request.responseMapClass=@"OTAModel";
-    [self postRequest:request responseHandler:^(NSError * _Nullable error, SJTYResponse * _Nullable response) {
+    [self getRequest:request responseHandler:^(NSError * _Nullable error, SJTYResponse * _Nullable response) {
         responseHandler(error,response);
     }];
     
