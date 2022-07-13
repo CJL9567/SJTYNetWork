@@ -248,48 +248,6 @@ static BaseApiClient *apiClient;
     
 }
 
-
-
--(void)putDownloadFile:(SJTYRequest *)request progressHandler:(ProgressHandler)progressHandler responseHandler:(ResponseHandler )responseHandler{
-    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    manager.requestSerializer = [AFHTTPRequestSerializer serializer];
-    [manager.requestSerializer willChangeValueForKey:@"timeoutInterval"];
-    manager.requestSerializer.timeoutInterval = request.timeoutInterval;
-    [manager.requestSerializer didChangeValueForKey:@"timeoutInterval"];
-    manager.responseSerializer = [AFJSONResponseSerializer serializer];
-
-    NSString *cookieStr = [NSString stringWithFormat:@"JSESSIONID=%@",[[NSUserDefaults standardUserDefaults] valueForKey:@"Cookie"]];
-    if (cookieStr!=nil) {
-        [manager.requestSerializer setValue:cookieStr forHTTPHeaderField:@"Cookie"];
-    }
-    NSString *host=nil;
-    if (self.host==nil||[self.host isEqualToString:@""]) {
-        host=Host;
-    }else{
-        host=self.host;
-    }
-    
-    NSURLRequest *urlRequest=[[NSURLRequest alloc] initWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",host,[request.apiUrl stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet  URLQueryAllowedCharacterSet]]]]];
-    
-    [manager downloadTaskWithRequest:urlRequest progress:^(NSProgress * _Nonnull downloadProgress) {
-//        NSLog(@"%.2f",downloadProgress.fractionCompleted);
-        progressHandler(downloadProgress);
-    } destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
-        NSString *filePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/Download/%@",request.fileName]];
-                
-        NSURL *url=[NSURL URLWithString:filePath];
-        return url;
-    } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
-
-        SJTYResponse *sjtyResponse= [[SJTYResponse alloc] init];
-        sjtyResponse.status=200;
-        sjtyResponse.data=filePath;
-        responseHandler(error,sjtyResponse);
-    }];
-}
-
-
-
 -(void)downloadFile:(SJTYRequest *)request progressHandler:(ProgressHandler)progressHandler responseHandler:(ResponseHandler )responseHandler{
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.requestSerializer = [AFHTTPRequestSerializer serializer];
