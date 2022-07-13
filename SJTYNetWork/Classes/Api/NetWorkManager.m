@@ -124,8 +124,9 @@ static NetWorkManager *manager;
     [self.appApi apiAppEnable:key responseHandler:^(NSError * _Nullable error, SJTYResponse * _Nullable response) {
         if (response.status==200) {
             NSNumber *enable=response.data;
-            
-            self.appEnableBlock([enable boolValue]);
+            if (self.appEnableBlock) {
+                self.appEnableBlock([enable boolValue]);
+            }
         }
        
     }];

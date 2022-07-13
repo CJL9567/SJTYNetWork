@@ -22,5 +22,25 @@
         responseHandler(error,response);
     }];
 }
+
+///获取网页基础Url
+/// @param responseHandler 回调
+-(void)apiAppWebBaseUrl:(ResponseHandler)responseHandler{
+    SJTYRequest *request=[[SJTYRequest alloc] init];
+    request.apiUrl=[NSString stringWithFormat:@"/sjtyApi/app/getWebBaseUrl"];
+    [self getRequest:request responseHandler:^(NSError * _Nullable error, SJTYResponse * _Nullable response) {
+        responseHandler(error,response);
+    }];
+}
+
+///获取文件基础Url
+/// @param responseHandler 返回文件的url
+-(void)apiAppFileBaseUrl:(ResponseHandler)responseHandler{
+    SJTYRequest *request=[[SJTYRequest alloc] init];
+    request.apiUrl=[NSString stringWithFormat:@"/sjtyApi/app/getWebFileBaseUrl"];
+    [self getRequest:request responseHandler:^(NSError * _Nullable error, SJTYResponse * _Nullable response) {
+        responseHandler(error,response);
+    }];
+}
 @end
 
