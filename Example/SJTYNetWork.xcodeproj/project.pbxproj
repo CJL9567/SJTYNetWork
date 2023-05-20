@@ -12,7 +12,15 @@
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
+		738925282A187C7B00CC9096 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 738925272A187C7B00CC9096 /* AppDelegate.m */; };
+		7389252B2A187C7B00CC9096 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7389252A2A187C7B00CC9096 /* SceneDelegate.m */; };
+		7389252E2A187C7B00CC9096 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7389252D2A187C7B00CC9096 /* ViewController.m */; };
+		738925312A187C7B00CC9096 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7389252F2A187C7B00CC9096 /* Main.storyboard */; };
+		738925332A187C7C00CC9096 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 738925322A187C7C00CC9096 /* Assets.xcassets */; };
+		738925362A187C7C00CC9096 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 738925342A187C7C00CC9096 /* LaunchScreen.storyboard */; };
+		738925392A187C7C00CC9096 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 738925382A187C7C00CC9096 /* main.m */; };
 		A57BBB81616AE38B1CB8EDA6 /* libPods-SJTYNetWork_Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D7A1D8B416A75C22F4DDAA72 /* libPods-SJTYNetWork_Tests.a */; };
+		F40FEE1C17372AD91DA5453B /* libPods-SJTYNetWork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9739255EC31DEDB5BF4412D /* libPods-SJTYNetWork.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,9 +36,24 @@
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
+		668976D7736E455801286C7F /* Pods-SJTYNetWork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SJTYNetWork.debug.xcconfig"; path = "Target Support Files/Pods-SJTYNetWork/Pods-SJTYNetWork.debug.xcconfig"; sourceTree = "<group>"; };
+		738925242A187C7B00CC9096 /* SJTYNetWork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SJTYNetWork.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		738925262A187C7B00CC9096 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		738925272A187C7B00CC9096 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		738925292A187C7B00CC9096 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		7389252A2A187C7B00CC9096 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		7389252C2A187C7B00CC9096 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		7389252D2A187C7B00CC9096 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		738925302A187C7B00CC9096 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		738925322A187C7C00CC9096 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		738925352A187C7C00CC9096 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		738925372A187C7C00CC9096 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		738925382A187C7C00CC9096 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		882B5EC946919861D8E2D43A /* Pods-SJTYNetWork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SJTYNetWork.release.xcconfig"; path = "Target Support Files/Pods-SJTYNetWork/Pods-SJTYNetWork.release.xcconfig"; sourceTree = "<group>"; };
 		D7A1D8B416A75C22F4DDAA72 /* libPods-SJTYNetWork_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SJTYNetWork_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9F58FBA53CF1EF19F31C5D5 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		EE93AC5811C74F9A2742D13E /* Pods-SJTYNetWork_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SJTYNetWork_Tests.debug.xcconfig"; path = "Target Support Files/Pods-SJTYNetWork_Tests/Pods-SJTYNetWork_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		F9739255EC31DEDB5BF4412D /* libPods-SJTYNetWork.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SJTYNetWork.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +68,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		738925212A187C7B00CC9096 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F40FEE1C17372AD91DA5453B /* libPods-SJTYNetWork.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -53,6 +84,7 @@
 			children = (
 				60FF7A9C1954A5C5007DD14C /* Podspec Metadata */,
 				6003F5B5195388D20070C39A /* Tests */,
+				738925252A187C7B00CC9096 /* SJTYNetWork */,
 				6003F58C195388D20070C39A /* Frameworks */,
 				6003F58B195388D20070C39A /* Products */,
 				89111378EA951142C13E1357 /* Pods */,
@@ -63,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				6003F5AE195388D20070C39A /* SJTYNetWork_Tests.xctest */,
+				738925242A187C7B00CC9096 /* SJTYNetWork.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -75,6 +108,7 @@
 				6003F591195388D20070C39A /* UIKit.framework */,
 				6003F5AF195388D20070C39A /* XCTest.framework */,
 				D7A1D8B416A75C22F4DDAA72 /* libPods-SJTYNetWork_Tests.a */,
+				F9739255EC31DEDB5BF4412D /* libPods-SJTYNetWork.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -108,11 +142,31 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
+		738925252A187C7B00CC9096 /* SJTYNetWork */ = {
+			isa = PBXGroup;
+			children = (
+				738925262A187C7B00CC9096 /* AppDelegate.h */,
+				738925272A187C7B00CC9096 /* AppDelegate.m */,
+				738925292A187C7B00CC9096 /* SceneDelegate.h */,
+				7389252A2A187C7B00CC9096 /* SceneDelegate.m */,
+				7389252C2A187C7B00CC9096 /* ViewController.h */,
+				7389252D2A187C7B00CC9096 /* ViewController.m */,
+				7389252F2A187C7B00CC9096 /* Main.storyboard */,
+				738925322A187C7C00CC9096 /* Assets.xcassets */,
+				738925342A187C7C00CC9096 /* LaunchScreen.storyboard */,
+				738925372A187C7C00CC9096 /* Info.plist */,
+				738925382A187C7C00CC9096 /* main.m */,
+			);
+			path = SJTYNetWork;
+			sourceTree = "<group>";
+		};
 		89111378EA951142C13E1357 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				EE93AC5811C74F9A2742D13E /* Pods-SJTYNetWork_Tests.debug.xcconfig */,
 				28E3069D77C9DBD935EC8E96 /* Pods-SJTYNetWork_Tests.release.xcconfig */,
+				668976D7736E455801286C7F /* Pods-SJTYNetWork.debug.xcconfig */,
+				882B5EC946919861D8E2D43A /* Pods-SJTYNetWork.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -138,6 +192,24 @@
 			productReference = 6003F5AE195388D20070C39A /* SJTYNetWork_Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		738925232A187C7B00CC9096 /* SJTYNetWork */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7389253C2A187C7C00CC9096 /* Build configuration list for PBXNativeTarget "SJTYNetWork" */;
+			buildPhases = (
+				191567FB1CB01B9D6AE89923 /* [CP] Check Pods Manifest.lock */,
+				738925202A187C7B00CC9096 /* Sources */,
+				738925212A187C7B00CC9096 /* Frameworks */,
+				738925222A187C7B00CC9096 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SJTYNetWork;
+			productName = SJTYNetWork;
+			productReference = 738925242A187C7B00CC9096 /* SJTYNetWork.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -150,6 +222,11 @@
 				TargetAttributes = {
 					6003F5AD195388D20070C39A = {
 						DevelopmentTeam = 73H8J786JX;
+					};
+					738925232A187C7B00CC9096 = {
+						CreatedOnToolsVersion = 14.2;
+						DevelopmentTeam = 73H8J786JX;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -168,6 +245,7 @@
 			projectRoot = "";
 			targets = (
 				6003F5AD195388D20070C39A /* SJTYNetWork_Tests */,
+				738925232A187C7B00CC9096 /* SJTYNetWork */,
 			);
 		};
 /* End PBXProject section */
@@ -181,9 +259,41 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		738925222A187C7B00CC9096 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				738925362A187C7C00CC9096 /* LaunchScreen.storyboard in Resources */,
+				738925332A187C7C00CC9096 /* Assets.xcassets in Resources */,
+				738925312A187C7B00CC9096 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		191567FB1CB01B9D6AE89923 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SJTYNetWork-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		F22B68B2FFAC3C19E495D371 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -217,6 +327,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		738925202A187C7B00CC9096 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7389252E2A187C7B00CC9096 /* ViewController.m in Sources */,
+				738925282A187C7B00CC9096 /* AppDelegate.m in Sources */,
+				738925392A187C7C00CC9096 /* main.m in Sources */,
+				7389252B2A187C7B00CC9096 /* SceneDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
@@ -226,6 +347,22 @@
 				6003F5B9195388D20070C39A /* en */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		7389252F2A187C7B00CC9096 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				738925302A187C7B00CC9096 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		738925342A187C7C00CC9096 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				738925352A187C7C00CC9096 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -321,6 +458,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "Tests/Tests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -341,10 +479,112 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Tests/Tests-Prefix.pch";
 				INFOPLIST_FILE = "Tests/Tests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+		7389253A2A187C7C00CC9096 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 668976D7736E455801286C7F /* Pods-SJTYNetWork.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 73H8J786JX;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SJTYNetWork/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sjty.SJTYNetWork;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7389253B2A187C7C00CC9096 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 882B5EC946919861D8E2D43A /* Pods-SJTYNetWork.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 73H8J786JX;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SJTYNetWork/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sjty.SJTYNetWork;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -365,6 +605,15 @@
 			buildConfigurations = (
 				6003F5C3195388D20070C39A /* Debug */,
 				6003F5C4195388D20070C39A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7389253C2A187C7C00CC9096 /* Build configuration list for PBXNativeTarget "SJTYNetWork" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7389253A2A187C7C00CC9096 /* Debug */,
+				7389253B2A187C7C00CC9096 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

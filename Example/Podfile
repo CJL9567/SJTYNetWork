@@ -4,3 +4,9 @@ target 'SJTYNetWork_Tests' do
   
   
 end
+
+target 'SJTYNetWork' do
+  pod 'SJTYNetWork', :path => '../'
+  
+  
+end

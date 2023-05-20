@@ -15,8 +15,8 @@ PODS:
   - AFNetworking/UIKit (4.0.1):
     - AFNetworking/NSURLSession
   - MJExtension (3.3.0)
-  - SJTYNetWork (1.0.12):
-    - AFNetworking (~> 4.0)
+  - SJTYNetWork (1.0.15):
+    - AFNetworking
     - MJExtension
 
 DEPENDENCIES:
@@ -32,10 +32,10 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
+  AFNetworking: 3bd23d814e976cd148d7d44c3ab78017b744cd58
   MJExtension: 01704cca2b60a214c10761b6491eab74069d68a9
-  SJTYNetWork: 66d1cb7076c5b39ca3bbeb0bb2a5422a3be19d89
+  SJTYNetWork: 5104faefb35040132b2a06d4af32b50852b30a28
 
-PODFILE CHECKSUM: 12abf9b40f945510894a5bfcdb6c3dd10ff322a9
+PODFILE CHECKSUM: 2e2e6bb6302bebb33e2987d2f41aa7a9e3322b05
 
-COCOAPODS: 1.11.2
+COCOAPODS: 1.11.3

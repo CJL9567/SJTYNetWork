@@ -14,13 +14,15 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 获取ota列表
 /// @param productSub 产品型号
+/// @param queryPublish 是否发布 - false 为 内部测试OTA true 为正式版OTA 文件
 /// @param responseHandler 回调
--(void)apiOTAApiQueryListWithProductSub:(NSString *)productSub  responseHandler:(ResponseHandler _Nonnull)responseHandler;
+-(void)apiOTAApiQueryListWithProductSub:(NSString *)productSub queryPublish:(BOOL)queryPublish  responseHandler:(ResponseHandler _Nonnull)responseHandler;
 
 /// 获取最后上传的OTA文件
 /// @param productSub 产品型号
+/// @param queryPublish 是否发布 - false 为 内部测试OTA true 为正式版OTA 文件
 /// @param responseHandler 回调
--(void)apiOTAApiQueryLastOTAWithProductSub:(NSString *)productSub  responseHandler:(ResponseHandler _Nonnull)responseHandler;
+-(void)apiOTAApiQueryLastOTAWithProductSub:(NSString *)productSub queryPublish:(BOOL)queryPublish responseHandler:(ResponseHandler _Nonnull)responseHandler;
 
 
 /// 下载OTA文件

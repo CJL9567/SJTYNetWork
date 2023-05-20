@@ -1,6 +1,0 @@
-framework module SJTYNetWork {
-  umbrella header "SJTYNetWork-umbrella.h"
-
-  export *
-  module * { export * }
-}
