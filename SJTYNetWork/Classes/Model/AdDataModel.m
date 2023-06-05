@@ -12,7 +12,9 @@
 
 + (NSDictionary *)mj_replacedKeyFromPropertyName
 {
-    return @{@"htmlModel":@"html"};
+    return @{@"htmlModel":@"html",
+             @"adDataId":@"id"
+    };
 }
 
 @end
