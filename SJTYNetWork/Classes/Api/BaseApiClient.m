@@ -52,9 +52,10 @@ static BaseApiClient *apiClient;
     manager.requestSerializer.timeoutInterval = request.timeoutInterval;
     [manager.requestSerializer didChangeValueForKey:@"timeoutInterval"];
     
-    NSString *cookieStr = [NSString stringWithFormat:@"%@",[[NSUserDefaults standardUserDefaults] valueForKey:@"token"]];
+//    NSString *cookieStr = [NSString stringWithFormat:@"%@",[[NSUserDefaults standardUserDefaults] valueForKey:@"token"]];
+    NSString *cookieStr = [NSString stringWithFormat:@"JSESSIONID=%@",[[NSUserDefaults standardUserDefaults] valueForKey:@"Cookie"]];
     if (cookieStr!=nil) {
-        [manager.requestSerializer setValue:cookieStr forHTTPHeaderField:@"token"];
+        [manager.requestSerializer setValue:cookieStr forHTTPHeaderField:@"Cookie"];
     }
     NSString *host=nil;
     if (self.host==nil||[self.host isEqualToString:@""]) {
@@ -109,9 +110,9 @@ static BaseApiClient *apiClient;
     manager.requestSerializer.timeoutInterval = request.timeoutInterval;
     [manager.requestSerializer didChangeValueForKey:@"timeoutInterval"];
     
-    NSString *cookieStr = [NSString stringWithFormat:@"%@",[[NSUserDefaults standardUserDefaults] valueForKey:@"token"]];
+    NSString *cookieStr = [NSString stringWithFormat:@"JSESSIONID=%@",[[NSUserDefaults standardUserDefaults] valueForKey:@"Cookie"]];
     if (cookieStr!=nil) {
-        [manager.requestSerializer setValue:cookieStr forHTTPHeaderField:@"token"];
+        [manager.requestSerializer setValue:cookieStr forHTTPHeaderField:@"Cookie"];
     }
     NSString *host=nil;
     if (self.host==nil||[self.host isEqualToString:@""]) {
@@ -159,9 +160,9 @@ static BaseApiClient *apiClient;
     [manager.requestSerializer willChangeValueForKey:@"timeoutInterval"];
     manager.requestSerializer.timeoutInterval = request.timeoutInterval;
     [manager.requestSerializer didChangeValueForKey:@"timeoutInterval"];
-    NSString *cookieStr = [NSString stringWithFormat:@"%@",[[NSUserDefaults standardUserDefaults] valueForKey:@"token"]];
+    NSString *cookieStr = [NSString stringWithFormat:@"JSESSIONID=%@",[[NSUserDefaults standardUserDefaults] valueForKey:@"Cookie"]];
     if (cookieStr!=nil) {
-        [manager.requestSerializer setValue:cookieStr forHTTPHeaderField:@"token"];
+        [manager.requestSerializer setValue:cookieStr forHTTPHeaderField:@"Cookie"];
     }
     NSString *host=nil;
     if (self.host==nil||[self.host isEqualToString:@""]) {
@@ -208,9 +209,9 @@ static BaseApiClient *apiClient;
     manager.responseSerializer = [AFJSONResponseSerializer serializer];
 
     [manager.requestSerializer setValue:@"multipart/form-data" forHTTPHeaderField:@"Content-Type"];
-    NSString *cookieStr = [NSString stringWithFormat:@"%@",[[NSUserDefaults standardUserDefaults] valueForKey:@"token"]];
+    NSString *cookieStr = [NSString stringWithFormat:@"JSESSIONID=%@",[[NSUserDefaults standardUserDefaults] valueForKey:@"Cookie"]];
     if (cookieStr!=nil) {
-        [manager.requestSerializer setValue:cookieStr forHTTPHeaderField:@"token"];
+        [manager.requestSerializer setValue:cookieStr forHTTPHeaderField:@"Cookie"];
     }
     NSString *host=nil;
     if (self.host==nil||[self.host isEqualToString:@""]) {
@@ -256,9 +257,9 @@ static BaseApiClient *apiClient;
     [manager.requestSerializer didChangeValueForKey:@"timeoutInterval"];
     manager.responseSerializer = [AFJSONResponseSerializer serializer];
 
-    NSString *cookieStr = [NSString stringWithFormat:@"%@",[[NSUserDefaults standardUserDefaults] valueForKey:@"token"]];
+    NSString *cookieStr = [NSString stringWithFormat:@"JSESSIONID=%@",[[NSUserDefaults standardUserDefaults] valueForKey:@"Cookie"]];
     if (cookieStr!=nil) {
-        [manager.requestSerializer setValue:cookieStr forHTTPHeaderField:@"token"];
+        [manager.requestSerializer setValue:cookieStr forHTTPHeaderField:@"Cookie"];
     }
     NSString *host=nil;
     if (self.host==nil||[self.host isEqualToString:@""]) {
