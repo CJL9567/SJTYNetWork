@@ -12,18 +12,21 @@
 /// 获取关于我们网页
 /// @param language 语言 默认英文  zh-CN 、en-US
 /// @param responseHandler 回调
--(void)apiHtmlAboutUs:(LANGUAGE) language responseHandler:(ResponseHandler _Nonnull)responseHandler{
+-(void)apiHtmlAboutUs:(NSString *) language responseHandler:(ResponseHandler _Nonnull)responseHandler{
     
     NSString *lang=@"en-US";
-    if (language==LANGUAGE_EN) {
-        lang=@"en-US";
-    }else if (language==LANGUAGE_CN){
-        lang=@"zh-CN";
-    }else if (language==LANGUAGE_CN_TW){
-        lang=@"zh-TW";
-    }else if (language==LANGUAGE_JP){
-        lang=@"ja-JP";
+    if(language!=nil&&![language isEqualToString:@""]){
+        lang=language;
     }
+//    if (language==LANGUAGE_EN) {
+//        lang=@"en-US";
+//    }else if (language==LANGUAGE_CN){
+//        lang=@"zh-CN";
+//    }else if (language==LANGUAGE_CN_TW){
+//        lang=@"zh-TW";
+//    }else if (language==LANGUAGE_JP){
+//        lang=@"ja-JP";
+//    }
     SJTYRequest *request=[[SJTYRequest alloc] init];
     request.apiUrl=[NSString stringWithFormat:@"/sjtyApi/app/html/getAboutUs?productId=%@&lang=%@",self.prodcutID,lang];
     [self getRequest:request responseHandler:^(NSError * _Nullable error, SJTYResponse * _Nullable response) {
@@ -36,17 +39,11 @@
 /// 获取隐私政策
 /// @param language language 语言 默认英文  zh-CN 、en-US
 /// @param responseHandler 回调
--(void)apiHtmlPrivacyPolicy:(LANGUAGE)language responseHandler:(ResponseHandler _Nonnull)responseHandler{
+-(void)apiHtmlPrivacyPolicy:(NSString *)language responseHandler:(ResponseHandler _Nonnull)responseHandler{
     
     NSString *lang=@"en-US";
-    if (language==LANGUAGE_EN) {
-        lang=@"en-US";
-    }else if (language==LANGUAGE_CN){
-        lang=@"zh-CN";
-    }else if (language==LANGUAGE_CN_TW){
-        lang=@"zh-TW";
-    }else if (language==LANGUAGE_JP){
-        lang=@"ja-JP";
+    if(language!=nil&&![language isEqualToString:@""]){
+        lang=language;
     }
     SJTYRequest *request=[[SJTYRequest alloc] init];
     request.apiUrl=[NSString stringWithFormat:@"/sjtyApi/app/html/getPrivacyPolicy?productId=%@&lang=%@",self.prodcutID,lang];
@@ -58,16 +55,10 @@
 /// 获取产品使用说明
 /// @param language language 语言 默认英文  zh-CN 、en-US
 /// @param responseHandler 回调
--(void)apiHtmlProcedures:(LANGUAGE)language responseHandler:(ResponseHandler _Nonnull)responseHandler{
+-(void)apiHtmlProcedures:(NSString *)language responseHandler:(ResponseHandler _Nonnull)responseHandler{
     NSString *lang=@"en-US";
-    if (language==LANGUAGE_EN) {
-        lang=@"en-US";
-    }else if (language==LANGUAGE_CN){
-        lang=@"zh-CN";
-    }else if (language==LANGUAGE_CN_TW){
-        lang=@"zh-TW";
-    }else if (language==LANGUAGE_JP){
-        lang=@"ja-JP";
+    if(language!=nil&&![language isEqualToString:@""]){
+        lang=language;
     }
     SJTYRequest *request=[[SJTYRequest alloc] init];
     request.apiUrl=[NSString stringWithFormat:@"/sjtyApi/app/html/getProcedures?productId=%@&lang=%@",self.prodcutID,lang];
@@ -79,17 +70,11 @@
 /// 获取用户手册
 /// @param language language 语言 默认英文  zh-CN 、en-US
 /// @param responseHandler 回调
--(void)apiHtmlProtocol:(LANGUAGE)language responseHandler:(ResponseHandler _Nonnull)responseHandler{
+-(void)apiHtmlProtocol:(NSString *)language responseHandler:(ResponseHandler _Nonnull)responseHandler{
 
     NSString *lang=@"en-US";
-    if (language==LANGUAGE_EN) {
-        lang=@"en-US";
-    }else if (language==LANGUAGE_CN){
-        lang=@"zh-CN";
-    }else if (language==LANGUAGE_CN_TW){
-        lang=@"zh-TW";
-    }else if (language==LANGUAGE_JP){
-        lang=@"ja-JP";
+    if(language!=nil&&![language isEqualToString:@""]){
+        lang=language;
     }
     SJTYRequest *request=[[SJTYRequest alloc] init];
     request.apiUrl=[NSString stringWithFormat:@"/sjtyApi/app/html/getProtocol?productId=%@&lang=%@",self.prodcutID,lang];

@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// 小知识类型
 /// @param language 语言类型
 /// @param responseHandler 回调
--(void)apiKnowledgeApiQueryType:(LANGUAGE)language responseHandler:(ResponseHandler _Nonnull)responseHandler;
+-(void)apiKnowledgeApiQueryType:(NSString *)language responseHandler:(ResponseHandler _Nonnull)responseHandler;
 
 
 /// 小知识列表

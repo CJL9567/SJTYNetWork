@@ -13,16 +13,10 @@
 /// 小知识类型
 /// @param language 语言类型
 /// @param responseHandler 回调
--(void)apiKnowledgeApiQueryType:(LANGUAGE)language responseHandler:(ResponseHandler _Nonnull)responseHandler{
+-(void)apiKnowledgeApiQueryType:(NSString *)language responseHandler:(ResponseHandler _Nonnull)responseHandler{
     NSString *lang=@"en-US";
-    if (language==LANGUAGE_EN) {
-        lang=@"en-US";
-    }else if (language==LANGUAGE_CN){
-        lang=@"zh-CN";
-    }else if (language==LANGUAGE_CN_TW){
-        lang=@"zh-TW";
-    }else if (language==LANGUAGE_JP){
-        lang=@"ja-JP";
+    if(language!=nil&&![language isEqualToString:@""]){
+        lang=language;
     }
     SJTYRequest *request=[[SJTYRequest alloc] init];
     request.apiUrl=[NSString stringWithFormat:@"/sjtyApi/app/tips/getTipsTypes?productId=%@&languStr=%@",self.prodcutID,lang];

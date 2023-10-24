@@ -23,16 +23,15 @@ typedef void(^ProgressHandler)(NSProgress * _Nonnull uploadProgress);
 #define HOST_FILE [NSString stringWithFormat:@"%@/webFile/file/",Host]
 
 
-typedef enum : NSUInteger {
-    ///英文
-    LANGUAGE_EN,
-    ///中文
-    LANGUAGE_CN,
-    ///中国台湾
-    LANGUAGE_CN_TW,
-    ///日语
-    LANGUAGE_JP,
-} LANGUAGE;
-
+//typedef enum : NSUInteger {
+//    ///英文
+//    LANGUAGE_EN,
+//    ///中文
+//    LANGUAGE_CN,
+//    ///中国台湾
+//    LANGUAGE_CN_TW,
+//    ///日语
+//    LANGUAGE_JP,
+//} LANGUAGE;
 
 #endif /* Define_h */
