@@ -86,6 +86,11 @@ static BaseApiClient *apiClient;
             
         }
         
+        if (!request.mapClass&&request.responseMapClass) {
+            NSArray *dataArray=    [NSClassFromString(request.responseMapClass) mj_objectArrayWithKeyValuesArray:response.data];
+            response.responseObj=dataArray;
+        }
+        
         responseHandler(error,response);
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
