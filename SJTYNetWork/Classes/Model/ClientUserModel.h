@@ -51,6 +51,9 @@ NS_ASSUME_NONNULL_BEGIN
 ///颜值
 @property(nonatomic,copy)NSString *salt;
 
+///昵称
+@property(nonatomic,copy)NSString *nikename;
+
 
 @property(nonatomic,strong)ClientUserInfoModel *clientUserInfo;
 @end
