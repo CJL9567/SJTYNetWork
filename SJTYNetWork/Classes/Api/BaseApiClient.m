@@ -53,8 +53,6 @@ static BaseApiClient *apiClient;
     [manager.requestSerializer didChangeValueForKey:@"timeoutInterval"];
     [manager.requestSerializer setValue:@"iOS" forHTTPHeaderField:@"clientType"];
    
-    [manager.requestSerializer setValue:[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"] forHTTPHeaderField:@"versionName"];
-    
     NSString *version = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
     [manager.requestSerializer setValue:[NSString stringWithFormat:@"V %@",version] forHTTPHeaderField:@"version"];
     
@@ -104,7 +102,7 @@ static BaseApiClient *apiClient;
             
         SJTYResponse *response= [[SJTYResponse alloc] init];
         response.status=error.code;
-        response.message=[NSString stringWithFormat:@"网络错误(%ld)",(long)error.code];
+        response.message=[NSString stringWithFormat:@"Error(%ld)",(long)error.code];
         responseHandler(error,response);
     }];
 }
@@ -121,8 +119,8 @@ static BaseApiClient *apiClient;
     [manager.requestSerializer willChangeValueForKey:@"timeoutInterval"];
     manager.requestSerializer.timeoutInterval = request.timeoutInterval;
     [manager.requestSerializer didChangeValueForKey:@"timeoutInterval"];
-    [manager.requestSerializer setValue:[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"] forHTTPHeaderField:@"versionName"];
-    
+    [manager.requestSerializer setValue:@"iOS" forHTTPHeaderField:@"clientType"];
+   
     NSString *version = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
     [manager.requestSerializer setValue:[NSString stringWithFormat:@"V %@",version] forHTTPHeaderField:@"version"];
     
@@ -158,7 +156,7 @@ static BaseApiClient *apiClient;
             
         SJTYResponse *response= [[SJTYResponse alloc] init];
         response.status=error.code;
-        response.message=[NSString stringWithFormat:@"网络错误(%ld)",(long)error.code];
+        response.message=[NSString stringWithFormat:@"Error(%ld)",(long)error.code];
         responseHandler(error,response);
     }];
 }
@@ -176,6 +174,8 @@ static BaseApiClient *apiClient;
     [manager.requestSerializer willChangeValueForKey:@"timeoutInterval"];
     manager.requestSerializer.timeoutInterval = request.timeoutInterval;
     [manager.requestSerializer didChangeValueForKey:@"timeoutInterval"];
+    [manager.requestSerializer setValue:@"iOS" forHTTPHeaderField:@"clientType"];
+   
     NSString *version = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
     [manager.requestSerializer setValue:[NSString stringWithFormat:@"V %@",version] forHTTPHeaderField:@"version"];
     
@@ -208,7 +208,7 @@ static BaseApiClient *apiClient;
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         SJTYResponse *response= [[SJTYResponse alloc] init];
         response.status=error.code;
-        response.message=[NSString stringWithFormat:@"网络错误(%ld)",(long)error.code];
+        response.message=[NSString stringWithFormat:@"Error(%ld)",(long)error.code];
         responseHandler(error,response);
     }];
     
@@ -227,6 +227,8 @@ static BaseApiClient *apiClient;
 
 
     manager.responseSerializer = [AFJSONResponseSerializer serializer];
+    [manager.requestSerializer setValue:@"iOS" forHTTPHeaderField:@"clientType"];
+   
     NSString *version = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
     [manager.requestSerializer setValue:[NSString stringWithFormat:@"V %@",version] forHTTPHeaderField:@"version"];
     
@@ -265,7 +267,7 @@ static BaseApiClient *apiClient;
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         SJTYResponse *response= [[SJTYResponse alloc] init];
         response.status=error.code;
-        response.message=[NSString stringWithFormat:@"网络错误(%ld)",(long)error.code];
+        response.message=[NSString stringWithFormat:@"Error(%ld)",(long)error.code];
         responseHandler(error,response);
     }];
     
@@ -278,6 +280,8 @@ static BaseApiClient *apiClient;
     manager.requestSerializer.timeoutInterval = request.timeoutInterval;
     [manager.requestSerializer didChangeValueForKey:@"timeoutInterval"];
     manager.responseSerializer = [AFJSONResponseSerializer serializer];
+    [manager.requestSerializer setValue:@"iOS" forHTTPHeaderField:@"clientType"];
+   
     NSString *version = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
     [manager.requestSerializer setValue:[NSString stringWithFormat:@"V %@",version] forHTTPHeaderField:@"version"];
     
