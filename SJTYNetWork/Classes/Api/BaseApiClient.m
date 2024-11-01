@@ -51,6 +51,13 @@ static BaseApiClient *apiClient;
     [manager.requestSerializer willChangeValueForKey:@"timeoutInterval"];
     manager.requestSerializer.timeoutInterval = request.timeoutInterval;
     [manager.requestSerializer didChangeValueForKey:@"timeoutInterval"];
+    [manager.requestSerializer setValue:@"iOS" forHTTPHeaderField:@"clientType"];
+   
+    [manager.requestSerializer setValue:[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"] forHTTPHeaderField:@"versionName"];
+    
+    NSString *version = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
+    [manager.requestSerializer setValue:[NSString stringWithFormat:@"V %@",version] forHTTPHeaderField:@"version"];
+    
     
 //    NSString *cookieStr = [NSString stringWithFormat:@"%@",[[NSUserDefaults standardUserDefaults] valueForKey:@"token"]];
     NSString *cookieStr = [NSString stringWithFormat:@"JSESSIONID=%@",[[NSUserDefaults standardUserDefaults] valueForKey:@"Cookie"]];
@@ -114,6 +121,10 @@ static BaseApiClient *apiClient;
     [manager.requestSerializer willChangeValueForKey:@"timeoutInterval"];
     manager.requestSerializer.timeoutInterval = request.timeoutInterval;
     [manager.requestSerializer didChangeValueForKey:@"timeoutInterval"];
+    [manager.requestSerializer setValue:[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"] forHTTPHeaderField:@"versionName"];
+    
+    NSString *version = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
+    [manager.requestSerializer setValue:[NSString stringWithFormat:@"V %@",version] forHTTPHeaderField:@"version"];
     
     NSString *cookieStr = [NSString stringWithFormat:@"JSESSIONID=%@",[[NSUserDefaults standardUserDefaults] valueForKey:@"Cookie"]];
     if (cookieStr!=nil) {
@@ -165,7 +176,11 @@ static BaseApiClient *apiClient;
     [manager.requestSerializer willChangeValueForKey:@"timeoutInterval"];
     manager.requestSerializer.timeoutInterval = request.timeoutInterval;
     [manager.requestSerializer didChangeValueForKey:@"timeoutInterval"];
+    NSString *version = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
+    [manager.requestSerializer setValue:[NSString stringWithFormat:@"V %@",version] forHTTPHeaderField:@"version"];
+    
     NSString *cookieStr = [NSString stringWithFormat:@"JSESSIONID=%@",[[NSUserDefaults standardUserDefaults] valueForKey:@"Cookie"]];
+    
     if (cookieStr!=nil) {
         [manager.requestSerializer setValue:cookieStr forHTTPHeaderField:@"Cookie"];
     }
@@ -212,7 +227,9 @@ static BaseApiClient *apiClient;
 
 
     manager.responseSerializer = [AFJSONResponseSerializer serializer];
-
+    NSString *version = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
+    [manager.requestSerializer setValue:[NSString stringWithFormat:@"V %@",version] forHTTPHeaderField:@"version"];
+    
     [manager.requestSerializer setValue:@"multipart/form-data" forHTTPHeaderField:@"Content-Type"];
     NSString *cookieStr = [NSString stringWithFormat:@"JSESSIONID=%@",[[NSUserDefaults standardUserDefaults] valueForKey:@"Cookie"]];
     if (cookieStr!=nil) {
@@ -261,7 +278,9 @@ static BaseApiClient *apiClient;
     manager.requestSerializer.timeoutInterval = request.timeoutInterval;
     [manager.requestSerializer didChangeValueForKey:@"timeoutInterval"];
     manager.responseSerializer = [AFJSONResponseSerializer serializer];
-
+    NSString *version = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
+    [manager.requestSerializer setValue:[NSString stringWithFormat:@"V %@",version] forHTTPHeaderField:@"version"];
+    
     NSString *cookieStr = [NSString stringWithFormat:@"JSESSIONID=%@",[[NSUserDefaults standardUserDefaults] valueForKey:@"Cookie"]];
     if (cookieStr!=nil) {
         [manager.requestSerializer setValue:cookieStr forHTTPHeaderField:@"Cookie"];
