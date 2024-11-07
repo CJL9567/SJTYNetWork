@@ -255,7 +255,7 @@
 /// @param responseHandler 回调
 -(void)apiLocation:(NSString *)longitude  latitude:(NSString *)latitude  responseHandler:(ResponseHandler _Nonnull )responseHandler{
     SJTYRequest *request=[[SJTYRequest alloc] init];
-    request.apiUrl=[NSString stringWithFormat:@"/sjtyApi/app/clientUser/setLngLat?lat=%@&lng=%@",longitude,latitude];
+    request.apiUrl=[NSString stringWithFormat:@"/sjtyApi/app/clientUser/setLngLat?lng=%@&lat=%@",longitude,latitude];
     
     [self postRequest:request responseHandler:^(NSError * _Nullable error, SJTYResponse * _Nullable response) {
         responseHandler(error,response);
