@@ -9,7 +9,16 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-
+typedef enum : NSUInteger {
+    ///所有不提醒
+    OTAALERTNONE=0x00,
+    ///全部提醒
+    OTAALERTALL=0x01,
+    ///蓝牙提醒
+    OTAALERTBLUETOOTH=0x02,
+    ///WIFI提醒
+    OTAALERTWIFI=0x03,
+} OTAALERT;
 
 @interface OTAModel : SJTYBaseModel
 
@@ -53,6 +62,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 ///更新时间时间
 @property(nonatomic,copy)NSString *updateTime;
+
+///固件提醒类型
+@property(assign,nonatomic)OTAALERT otaAlert;
 
 @end
 
