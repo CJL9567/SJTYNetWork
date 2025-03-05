@@ -15,7 +15,7 @@ typedef void(^ResponseHandler)(NSError * _Nullable error, SJTYResponse * _Nullab
 typedef void(^ProgressHandler)(NSProgress * _Nonnull uploadProgress);
 
 ///主机地址
-#define Host @"http://app.f-union.com"
+#define Host @"https://app.f-union.com"
 
 ///html 地址前缀
 #define HOST_HTML [NSString stringWithFormat:@"%@/webHtml/html/",Host]
