@@ -24,6 +24,19 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param responseHandler 返回文件的url
 -(void)apiAppFileBaseUrl:(ResponseHandler _Nonnull)responseHandler;
 
+///根据经纬度获取城市
+/// @param lat 纬度
+/// @param lng 经度
+/// @param responseHandler 回调
+-(void)apiAppCityByLatLng:(NSString *)lat lng:(NSString *)lng responseHandler:(ResponseHandler _Nonnull)responseHandler;
+
+
+///根据经纬度获取位置信息
+/// @param lat 纬度
+/// @param lng 经度
+/// @param responseHandler 回调
+-(void)apiAppDistrictByLatLng:(NSString *)lat lng:(NSString *)lng responseHandler:(ResponseHandler _Nonnull)responseHandler;
+
 @end
 
 NS_ASSUME_NONNULL_END

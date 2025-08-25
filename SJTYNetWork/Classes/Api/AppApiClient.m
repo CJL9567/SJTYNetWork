@@ -42,5 +42,34 @@
         responseHandler(error,response);
     }];
 }
+
+
+
+///根据经纬度获取城市
+/// @param lat 纬度
+/// @param lng 经度
+/// @param responseHandler 回调
+-(void)apiAppCityByLatLng:(NSString *)lat lng:(NSString *)lng responseHandler:(ResponseHandler _Nonnull)responseHandler{
+    SJTYRequest *request=[[SJTYRequest alloc] init];
+    request.apiUrl=[NSString stringWithFormat:@"/sjtyApi/app/getCityByLatLng?lat=%@&lng=%@",lat,lng];
+    [self postRequest:request responseHandler:^(NSError * _Nullable error, SJTYResponse * _Nullable response) {
+        responseHandler(error,response);
+    }];
+}
+
+
+///根据经纬度获取位置信息
+/// @param lat 纬度
+/// @param lng 经度
+/// @param responseHandler 回调
+-(void)apiAppDistrictByLatLng:(NSString *)lat lng:(NSString *)lng responseHandler:(ResponseHandler _Nonnull)responseHandler{
+    SJTYRequest *request=[[SJTYRequest alloc] init];
+    request.apiUrl=[NSString stringWithFormat:@"/sjtyApi/app/getDistrictByLatLng?lat=%@&lng=%@",lat,lng];
+    [self postRequest:request responseHandler:^(NSError * _Nullable error, SJTYResponse * _Nullable response) {
+        responseHandler(error,response);
+    }];
+}
+
+
 @end
 

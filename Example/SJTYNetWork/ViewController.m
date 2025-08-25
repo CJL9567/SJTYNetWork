@@ -17,13 +17,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    OTAApiClient *otaClient = [[OTAApiClient alloc] init];
-    otaClient.prodcutID =@"1650324943902347265";
-    [otaClient apiOTAApiQueryLastOTAWithProductSub:@"景观灯" queryPublish:false responseHandler:^(NSError * _Nullable error, SJTYResponse * _Nullable response) {
-        if(response.status==200){
-            
-        }
-    }];
+//    OTAApiClient *otaClient = [[OTAApiClient alloc] init];
+//    otaClient.prodcutID =@"1650324943902347265";
+//    [otaClient apiOTAApiQueryLastOTAWithProductSub:@"景观灯" queryPublish:false responseHandler:^(NSError * _Nullable error, SJTYResponse * _Nullable response) {
+//        if(response.status==200){
+//            
+//        }
+//    }];
+//    AppApiClient *appClient = [[AppApiClient alloc] init];
+//    [appClient apiAppDistrictByLatLng:@"27.866636" lng:@"-112.908065" responseHandler:^(NSError * _Nullable error, SJTYResponse * _Nullable response) {
+//        NSLog(@"");
+//    }];
 }
 
 
