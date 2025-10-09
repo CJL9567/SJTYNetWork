@@ -8,7 +8,7 @@
 #import <Foundation/Foundation.h>
 
 
-#define SJTYLog(level,fmt) [SJTYLogManager logLevel:level format:fmt];
+#define SJTYLog(level,fmt...) [SJTYLogManager logLevel:level format:fmt];
 
 //#define SJTYInfoLog(format,...) [SJTYLogManager logLevel:LogLevelInfo format:format];
 
