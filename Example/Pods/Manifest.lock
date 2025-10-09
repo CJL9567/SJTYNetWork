@@ -14,8 +14,8 @@ PODS:
   - AFNetworking/Serialization (4.0.1)
   - AFNetworking/UIKit (4.0.1):
     - AFNetworking/NSURLSession
-  - MJExtension (3.3.0)
-  - SJTYNetWork (1.0.15):
+  - MJExtension (3.4.1)
+  - SJTYNetWork (1.0.29):
     - AFNetworking
     - MJExtension
 
@@ -33,9 +33,9 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AFNetworking: 3bd23d814e976cd148d7d44c3ab78017b744cd58
-  MJExtension: 01704cca2b60a214c10761b6491eab74069d68a9
-  SJTYNetWork: 5104faefb35040132b2a06d4af32b50852b30a28
+  MJExtension: 21c5f6f8c4d5d8844b7ae8fbae08fed0b501f961
+  SJTYNetWork: 1dc118038b653a65c4dcab15edbae7f97b936a46
 
 PODFILE CHECKSUM: 2e2e6bb6302bebb33e2987d2f41aa7a9e3322b05
 
-COCOAPODS: 1.11.3
+COCOAPODS: 1.16.2

@@ -24,10 +24,12 @@
 //            
 //        }
 //    }];
-//    AppApiClient *appClient = [[AppApiClient alloc] init];
-//    [appClient apiAppDistrictByLatLng:@"27.866636" lng:@"-112.908065" responseHandler:^(NSError * _Nullable error, SJTYResponse * _Nullable response) {
-//        NSLog(@"");
-//    }];
+//    SJTYLogManager *logManager=[SJTYLogManager sharedInstance];
+    
+    AppApiClient *appClient = [[AppApiClient alloc] init];
+    [appClient apiAppDistrictByLatLng:@"27.866636" lng:@"-112.908065" responseHandler:^(NSError * _Nullable error, SJTYResponse * _Nullable response) {
+        NSLog(@"");
+    }];
 }
 
 

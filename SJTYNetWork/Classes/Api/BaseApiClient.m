@@ -12,7 +12,7 @@
 #import <CoreTelephony/CTCellularData.h>
 
 #import "SJTYBaseModel.h"
-
+#import "SJTYLogManager.h"
 @interface BaseApiClient()
 
 @end
@@ -57,6 +57,8 @@ static BaseApiClient *apiClient;
     [manager.requestSerializer setValue:[NSString stringWithFormat:@"V %@",version] forHTTPHeaderField:@"version"];
     
     
+    
+    
 //    NSString *cookieStr = [NSString stringWithFormat:@"%@",[[NSUserDefaults standardUserDefaults] valueForKey:@"token"]];
     NSString *cookieStr = [NSString stringWithFormat:@"JSESSIONID=%@",[[NSUserDefaults standardUserDefaults] valueForKey:@"Cookie"]];
     if (cookieStr!=nil) {
@@ -70,10 +72,24 @@ static BaseApiClient *apiClient;
     }
     NSString *url=[[NSString stringWithFormat:@"%@%@",host,request.apiUrl] stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
     
+    
+    NSString *headers=[NSString stringWithFormat:@"HTTPRequestHeaders %@",manager.requestSerializer.HTTPRequestHeaders];
+    
+    SJTYLog(LogLevelInfo,headers);
+    
+    NSString *params = [NSString stringWithFormat:@"request.params :%@",request.params];
+    SJTYLog(LogLevelInfo,params);
+    
+    NSString *apiUrl = [NSString stringWithFormat:@"request.apiUrl :%@",request.apiUrl];
+    
+    SJTYLog(LogLevelInfo,apiUrl);
+    
     [manager POST:url parameters:request.params headers:@{} progress:^(NSProgress * _Nonnull uploadProgress) {
             
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-
+        NSString *logResponseObject= [NSString stringWithFormat:@"responseObject :%@",responseObject];
+        
+        SJTYLog(LogLevelInfo,logResponseObject);
         NSHTTPURLResponse *httpURLResponse = (NSHTTPURLResponse*)task.response;
         NSDictionary *dictTTTTTEMP = httpURLResponse.allHeaderFields;
         NSString *seesion=[[dictTTTTTEMP valueForKey:@"Cookie"] substringFromIndex:9];
@@ -99,7 +115,8 @@ static BaseApiClient *apiClient;
         responseHandler(error,response);
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-            
+        NSString *errorString= [NSString stringWithFormat:@"NSError: %@",error.localizedDescription];
+        SJTYLog(LogLevelInfo,errorString);
         SJTYResponse *response= [[SJTYResponse alloc] init];
         response.status=error.code;
         response.message=[NSString stringWithFormat:@"Error(%ld)",(long)error.code];
@@ -134,9 +151,26 @@ static BaseApiClient *apiClient;
     }else{
         host=self.host;
     }
+
+    NSString *headers=[NSString stringWithFormat:@"HTTPRequestHeaders %@",manager.requestSerializer.HTTPRequestHeaders];
+    
+    SJTYLog(LogLevelInfo,headers);
+    
+    NSString *params = [NSString stringWithFormat:@"request.params :%@",request.params];
+    SJTYLog(LogLevelInfo,params);
+    
+    NSString *apiUrl = [NSString stringWithFormat:@"request.apiUrl :%@",request.apiUrl];
+    
+    SJTYLog(LogLevelInfo,apiUrl);
+
     [manager GET:[NSString stringWithFormat:@"%@%@",host,[request.apiUrl stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet  URLQueryAllowedCharacterSet]]] parameters:request.params headers:@{} progress:^(NSProgress * _Nonnull uploadProgress) {
             
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        NSString *logResponseObject= [NSString stringWithFormat:@"responseObject :%@",responseObject];
+        
+        SJTYLog(LogLevelInfo,logResponseObject);
+
         NSError *error=nil;
         SJTYResponse *response= [SJTYResponse mj_objectWithKeyValues:responseObject];
         if (request.mapClass&&request.responseMapClass) {
@@ -153,7 +187,9 @@ static BaseApiClient *apiClient;
         responseHandler(error,response);
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-            
+        NSString *errorString= [NSString stringWithFormat:@"NSError: %@",error.localizedDescription];
+        SJTYLog(LogLevelInfo,errorString);
+        
         SJTYResponse *response= [[SJTYResponse alloc] init];
         response.status=error.code;
         response.message=[NSString stringWithFormat:@"Error(%ld)",(long)error.code];
@@ -190,7 +226,20 @@ static BaseApiClient *apiClient;
     }else{
         host=self.host;
     }
+    NSString *headers=[NSString stringWithFormat:@"HTTPRequestHeaders %@",manager.requestSerializer.HTTPRequestHeaders];
+    
+    SJTYLog(LogLevelInfo,headers);
+    
+    NSString *params = [NSString stringWithFormat:@"request.params :%@",request.params];
+    SJTYLog(LogLevelInfo,params);
+    
+    NSString *apiUrl = [NSString stringWithFormat:@"request.apiUrl :%@",request.apiUrl];
+    
+    SJTYLog(LogLevelInfo,apiUrl);
+    
     [manager PUT:[NSString stringWithFormat:@"%@%@",host,[request.apiUrl stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet  URLQueryAllowedCharacterSet]]] parameters:request.params headers:@{} success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        
         NSError *error=nil;
         SJTYResponse *response= [SJTYResponse mj_objectWithKeyValues:responseObject];
         if (request.mapClass&&request.responseMapClass) {
@@ -206,6 +255,8 @@ static BaseApiClient *apiClient;
         responseHandler(error,response);
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSString *errorString= [NSString stringWithFormat:@"NSError: %@",error.localizedDescription];
+        SJTYLog(LogLevelInfo,errorString);
         SJTYResponse *response= [[SJTYResponse alloc] init];
         response.status=error.code;
         response.message=[NSString stringWithFormat:@"Error(%ld)",(long)error.code];
@@ -243,6 +294,18 @@ static BaseApiClient *apiClient;
     }else{
         host=self.host;
     }
+    
+    NSString *headers=[NSString stringWithFormat:@"HTTPRequestHeaders %@",manager.requestSerializer.HTTPRequestHeaders];
+    
+    SJTYLog(LogLevelInfo,headers);
+    
+    NSString *params = [NSString stringWithFormat:@"request.params :%@",request.params];
+    SJTYLog(LogLevelInfo,params);
+    
+    NSString *apiUrl = [NSString stringWithFormat:@"request.apiUrl :%@",request.apiUrl];
+    
+    SJTYLog(LogLevelInfo,apiUrl);
+    
     [manager POST:[NSString stringWithFormat:@"%@%@",host,[request.apiUrl stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet  URLQueryAllowedCharacterSet]]] parameters:request.params headers:@{} constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
         NSDate *date = [NSDate date];
 
@@ -261,10 +324,15 @@ static BaseApiClient *apiClient;
     } progress:^(NSProgress * _Nonnull uploadProgress) {
         progressHandler(uploadProgress);
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSString *logResponseObject= [NSString stringWithFormat:@"responseObject :%@",responseObject];
+        
+        SJTYLog(LogLevelInfo,logResponseObject);
         NSError *error=nil;
         SJTYResponse *response= [SJTYResponse mj_objectWithKeyValues:responseObject];
         responseHandler(error,response);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSString *errorString= [NSString stringWithFormat:@"NSError: %@",error.localizedDescription];
+        SJTYLog(LogLevelInfo,errorString);
         SJTYResponse *response= [[SJTYResponse alloc] init];
         response.status=error.code;
         response.message=[NSString stringWithFormat:@"Error(%ld)",(long)error.code];
@@ -298,6 +366,16 @@ static BaseApiClient *apiClient;
     
     NSURLRequest *urlRequest=[[NSURLRequest alloc] initWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",[request.apiUrl stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet  URLQueryAllowedCharacterSet]]]]];
     
+    NSString *headers=[NSString stringWithFormat:@"HTTPRequestHeaders %@",manager.requestSerializer.HTTPRequestHeaders];
+    
+    SJTYLog(LogLevelInfo,headers);
+    
+    NSString *params = [NSString stringWithFormat:@"request.params :%@",request.params];
+    SJTYLog(LogLevelInfo,params);
+    
+    NSString *apiUrl = [NSString stringWithFormat:@"request.apiUrl :%@",request.apiUrl];
+    
+    SJTYLog(LogLevelInfo,apiUrl);
     NSURLSessionDownloadTask *downloadTask = [manager downloadTaskWithRequest:urlRequest progress:^(NSProgress * _Nonnull downloadProgress) {
         NSLog(@"%.2f",downloadProgress.fractionCompleted);
         progressHandler(downloadProgress);
@@ -307,7 +385,8 @@ static BaseApiClient *apiClient;
         NSURL *url=[NSURL fileURLWithPath:filePath];
         return url;
     } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
-
+        NSString *errorString= [NSString stringWithFormat:@"NSError: %@",error.localizedDescription];
+        SJTYLog(LogLevelInfo,errorString);
         SJTYResponse *sjtyResponse= [[SJTYResponse alloc] init];
         sjtyResponse.status=200;
         sjtyResponse.data=filePath;
