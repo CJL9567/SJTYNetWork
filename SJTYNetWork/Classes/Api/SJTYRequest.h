@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,copy)NSString *apiUrl;
 
 ///请求参数
-@property(nonatomic,strong)NSDictionary *params;
+@property(nonatomic,strong)id params;
 
 ///请求超时时间，单位为秒
 @property (nonatomic, assign) NSUInteger timeoutInterval;
