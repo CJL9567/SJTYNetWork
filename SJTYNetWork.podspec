@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SJTYNetWork'
-  s.version          = '1.0.35'
+  s.version          = '1.0.36'
   s.summary          = 'A short description of SJTYNetWork.'
   
 # This description is used to generate tags and improve search results.

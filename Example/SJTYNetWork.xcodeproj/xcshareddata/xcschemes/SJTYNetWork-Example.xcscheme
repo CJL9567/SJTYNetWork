@@ -63,12 +63,21 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
+            BlueprintIdentifier = "738925232A187C7B00CC9096"
+            BuildableName = "SJTYNetWork.app"
+            BlueprintName = "SJTYNetWork"
+            ReferencedContainer = "container:SJTYNetWork.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
             BlueprintIdentifier = "6003F589195388D20070C39A"
             BuildableName = "SJTYNetWork_Example.app"
             BlueprintName = "SJTYNetWork_Example"
             ReferencedContainer = "container:SJTYNetWork.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -86,6 +95,15 @@
             ReferencedContainer = "container:SJTYNetWork.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "6003F589195388D20070C39A"
+            BuildableName = "SJTYNetWork_Example.app"
+            BlueprintName = "SJTYNetWork_Example"
+            ReferencedContainer = "container:SJTYNetWork.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
