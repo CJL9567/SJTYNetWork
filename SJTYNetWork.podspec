@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SJTYNetWork'
-  s.version          = '1.0.33'
+  s.version          = '1.0.34'
   s.summary          = 'A short description of SJTYNetWork.'
   
 # This description is used to generate tags and improve search results.
@@ -28,7 +28,7 @@ TODO: Add long description of the pod here.
   s.source           = { :git => 'https://github.com/CJL9567/SJTYNetWork.git', :tag => s.version}
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '9.0'
+  s.ios.deployment_target = '12.0'
 
   s.source_files = 'SJTYNetWork/Classes/**/*'
   

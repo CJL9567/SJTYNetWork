@@ -338,7 +338,7 @@
 		15062838C574FC5DE434448196631249 /* AFNetworking-iOS12.0.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "AFNetworking-iOS12.0.debug.xcconfig"; path = "../AFNetworking-iOS12.0/AFNetworking-iOS12.0.debug.xcconfig"; sourceTree = "<group>"; };
 		15C4C254CCCB1CD943F7019AB056DFA9 /* NSObject+MJProperty.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+MJProperty.m"; path = "MJExtension/NSObject+MJProperty.m"; sourceTree = "<group>"; };
 		16BA82DAE6BB631A96C309D6065A8E90 /* FeedbackModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = FeedbackModel.m; sourceTree = "<group>"; };
-		1A4DAAFDE7DC53CA096635B1137F4BC8 /* Pods-SJTYNetWork */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "Pods-SJTYNetWork"; path = "libPods-SJTYNetWork.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A4DAAFDE7DC53CA096635B1137F4BC8 /* libPods-SJTYNetWork.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SJTYNetWork.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AEB03B82F8639714D44A02CA70FBF1A /* AFNetworking-iOS12.0.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "AFNetworking-iOS12.0.release.xcconfig"; path = "../AFNetworking-iOS12.0/AFNetworking-iOS12.0.release.xcconfig"; sourceTree = "<group>"; };
 		1BF153426464E31BBFE743B5DA40ED5D /* NSString+MJExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+MJExtension.m"; path = "MJExtension/NSString+MJExtension.m"; sourceTree = "<group>"; };
 		1C9E2594E17E69650891676DE326DA7D /* UIProgressView+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIProgressView+AFNetworking.m"; path = "UIKit+AFNetworking/UIProgressView+AFNetworking.m"; sourceTree = "<group>"; };
@@ -347,7 +347,7 @@
 		214B66F186AD517A0F604875C16C63C1 /* SJTYLogManager-iOS11.0-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SJTYLogManager-iOS11.0-dummy.m"; sourceTree = "<group>"; };
 		29A9EB719539436A9E2A9CF9D08EB1A5 /* Pods-SJTYNetWork_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SJTYNetWork_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		2DE6EC9814270E840E9FD074C062F079 /* UIRefreshControl+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIRefreshControl+AFNetworking.h"; path = "UIKit+AFNetworking/UIRefreshControl+AFNetworking.h"; sourceTree = "<group>"; };
-		2EC1C58FFD90AEDF3EA87EE4588E7F68 /* SJTYNetWork-iOS11.0 */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "SJTYNetWork-iOS11.0"; path = "libSJTYNetWork-iOS11.0.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2EC1C58FFD90AEDF3EA87EE4588E7F68 /* libSJTYNetWork-iOS11.0.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libSJTYNetWork-iOS11.0.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F74A39ED0B1EFC4AE6CC2E85BAB359C /* HtmlApiClient.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HtmlApiClient.m; sourceTree = "<group>"; };
 		2FD9AF873096CA0AB45F9BD3794B0A92 /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFNetworkReachabilityManager.h; path = AFNetworking/AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
 		30C7C3FCFFAA548E11FC8DF0D91D5F95 /* Pods-SJTYNetWork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SJTYNetWork.debug.xcconfig"; sourceTree = "<group>"; };
@@ -360,7 +360,7 @@
 		3B0AEBE37E0A2B62C30B0154C6DD473A /* MJPropertyKey.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJPropertyKey.m; path = MJExtension/MJPropertyKey.m; sourceTree = "<group>"; };
 		3BD4E3D9AD463BDEB3D42FC130D47D13 /* Pods-SJTYNetWork-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SJTYNetWork-acknowledgements.plist"; sourceTree = "<group>"; };
 		3C56A6BE30E80BAF37FDFB16D08E2BED /* SJTYLogManager-iOS12.0.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "SJTYLogManager-iOS12.0.release.xcconfig"; path = "../SJTYLogManager-iOS12.0/SJTYLogManager-iOS12.0.release.xcconfig"; sourceTree = "<group>"; };
-		3CB281DEC0BB2F8766C1FF5F4CB68E8A /* MJExtension-iOS11.0 */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "MJExtension-iOS11.0"; path = "libMJExtension-iOS11.0.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CB281DEC0BB2F8766C1FF5F4CB68E8A /* libMJExtension-iOS11.0.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libMJExtension-iOS11.0.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D2E5BB541A9E7A3184832BE7C06DA9E /* AFAutoPurgingImageCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFAutoPurgingImageCache.m; path = "UIKit+AFNetworking/AFAutoPurgingImageCache.m"; sourceTree = "<group>"; };
 		3DDCF3D98D7615615C6B3B39ABFE7385 /* AdApiClient.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AdApiClient.m; sourceTree = "<group>"; };
 		4102ACD5277300E0DA7AA66A4372C99E /* SJTYLogManager-iOS11.0.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "SJTYLogManager-iOS11.0.release.xcconfig"; sourceTree = "<group>"; };
@@ -374,7 +374,7 @@
 		4DF42408779542E858EC1CC1D5AFB99B /* MJPropertyType.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJPropertyType.m; path = MJExtension/MJPropertyType.m; sourceTree = "<group>"; };
 		5152EEA4E27658C259DA01D786DC8E9A /* SJTYNetWork-iOS11.0-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SJTYNetWork-iOS11.0-prefix.pch"; sourceTree = "<group>"; };
 		52A24F41A5AC3F93B4432E01A6253A20 /* AFNetworking-iOS12.0-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "AFNetworking-iOS12.0-prefix.pch"; path = "../AFNetworking-iOS12.0/AFNetworking-iOS12.0-prefix.pch"; sourceTree = "<group>"; };
-		52AF2362A2C0EC733413A824ED6B8BA0 /* Pods-SJTYNetWork_Tests */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "Pods-SJTYNetWork_Tests"; path = "libPods-SJTYNetWork_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		52AF2362A2C0EC733413A824ED6B8BA0 /* libPods-SJTYNetWork_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SJTYNetWork_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		53353E496043A9E1B1F1B0D7E3D13366 /* SJTYResponse.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SJTYResponse.m; sourceTree = "<group>"; };
 		546BD73BE53CC4DB92C4F597F883307E /* AdApiClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AdApiClient.h; sourceTree = "<group>"; };
 		59699972CC16D8B7160F50F05991C6BB /* MJExtensionConst.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJExtensionConst.h; path = MJExtension/MJExtensionConst.h; sourceTree = "<group>"; };
@@ -382,7 +382,7 @@
 		5CF35FD9BA3FAB477C43F03A97610DE2 /* NSObject+MJClass.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+MJClass.m"; path = "MJExtension/NSObject+MJClass.m"; sourceTree = "<group>"; };
 		5E47F1D601E1706F8479B04C6A7E6DF1 /* AFURLSessionManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFURLSessionManager.m; path = AFNetworking/AFURLSessionManager.m; sourceTree = "<group>"; };
 		5EF35C3487E13AE91CF0F41DAA6C362C /* CommunityApiClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CommunityApiClient.h; sourceTree = "<group>"; };
-		6043D7776EFD81B160CC202D445B4920 /* MJExtension-iOS12.0 */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "MJExtension-iOS12.0"; path = "libMJExtension-iOS12.0.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6043D7776EFD81B160CC202D445B4920 /* libMJExtension-iOS12.0.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libMJExtension-iOS12.0.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		61AFC7981A67C3FCA26CE0E09CB5CC33 /* MJPropertyKey.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJPropertyKey.h; path = MJExtension/MJPropertyKey.h; sourceTree = "<group>"; };
 		62937C4402812699F06E795D5138C3F7 /* MJExtension-iOS11.0.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "MJExtension-iOS11.0.debug.xcconfig"; sourceTree = "<group>"; };
 		636ABF75BEA9FFAB93B7811C2A6D848F /* AFCompatibilityMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFCompatibilityMacros.h; path = AFNetworking/AFCompatibilityMacros.h; sourceTree = "<group>"; };
@@ -390,7 +390,7 @@
 		6400C0743002E0C74501215C4FAAF3A6 /* FeedbackApiClient.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = FeedbackApiClient.m; sourceTree = "<group>"; };
 		640A366071960BBC0CF83C90CBE3F6D9 /* SJTYNetWork-iOS11.0.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "SJTYNetWork-iOS11.0.release.xcconfig"; sourceTree = "<group>"; };
 		661225B5599F3AC56C1E9F7ACAD8F1FD /* SJTYLogManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SJTYLogManager.h; path = SJTYLogManager/Classes/SJTYLogManager.h; sourceTree = "<group>"; };
-		6A978DAC974D7083B4A300E403A77E99 /* AFNetworking-iOS12.0 */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "AFNetworking-iOS12.0"; path = "libAFNetworking-iOS12.0.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A978DAC974D7083B4A300E403A77E99 /* libAFNetworking-iOS12.0.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libAFNetworking-iOS12.0.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		71514CB13D59DD3A63DF619184135F87 /* Pods-SJTYNetWork_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SJTYNetWork_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		715D3E86EB520BF8139E6A28A2345A9D /* AFNetworking-iOS11.0-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AFNetworking-iOS11.0-dummy.m"; sourceTree = "<group>"; };
 		73296A8CCA42E75414D7484D337F65F2 /* SJTYResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SJTYResponse.h; sourceTree = "<group>"; };
@@ -420,10 +420,10 @@
 		936C7DEE3B1E41F2698FA44D4170E6C0 /* UIButton+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIButton+AFNetworking.h"; path = "UIKit+AFNetworking/UIButton+AFNetworking.h"; sourceTree = "<group>"; };
 		948979CF426B124783797829B6877D96 /* SJTYLogManager-iOS12.0-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SJTYLogManager-iOS12.0-prefix.pch"; path = "../SJTYLogManager-iOS12.0/SJTYLogManager-iOS12.0-prefix.pch"; sourceTree = "<group>"; };
 		94AFA82141F468DCA00C1369E372FF79 /* UIActivityIndicatorView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIActivityIndicatorView+AFNetworking.h"; path = "UIKit+AFNetworking/UIActivityIndicatorView+AFNetworking.h"; sourceTree = "<group>"; };
-		976DB940AABA1F326B2420C4F2D49AB9 /* SJTYNetWork.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = SJTYNetWork.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		976DB940AABA1F326B2420C4F2D49AB9 /* SJTYNetWork.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = SJTYNetWork.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		98AB2F81ADAD6F17856856E674E12161 /* WKWebView+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "WKWebView+AFNetworking.m"; path = "UIKit+AFNetworking/WKWebView+AFNetworking.m"; sourceTree = "<group>"; };
 		98C3B66A022EC76CCB46A065660DA266 /* KnowledgeApiClient.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KnowledgeApiClient.m; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9F589FB9751557E645F7208EE6F49FBE /* AFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFNetworkActivityIndicatorManager.h; path = "UIKit+AFNetworking/AFNetworkActivityIndicatorManager.h"; sourceTree = "<group>"; };
 		A3199F7F4960C94D3BB9174388C2C4C1 /* ClientUserModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ClientUserModel.m; sourceTree = "<group>"; };
 		AA0070C9A82395BE211520D538497BD7 /* MJExtension-iOS11.0.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "MJExtension-iOS11.0.release.xcconfig"; sourceTree = "<group>"; };
@@ -435,18 +435,18 @@
 		B185167B6A5B13676129E2391D9D35F9 /* KnowledgeModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KnowledgeModel.h; sourceTree = "<group>"; };
 		B32973E495F0112F6C2C013772EE6D6A /* FeedbackApiClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FeedbackApiClient.h; sourceTree = "<group>"; };
 		B3758EBDAF6E09A56AA96E468A0E2378 /* MJExtension-iOS11.0-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MJExtension-iOS11.0-prefix.pch"; sourceTree = "<group>"; };
-		B47A5ADB4CE1B9E8915B5183F2F0F994 /* SJTYLogManager-iOS11.0 */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "SJTYLogManager-iOS11.0"; path = "libSJTYLogManager-iOS11.0.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B47A5ADB4CE1B9E8915B5183F2F0F994 /* libSJTYLogManager-iOS11.0.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libSJTYLogManager-iOS11.0.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B893256542762B4928989D1D89808D2B /* AdDataModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AdDataModel.m; sourceTree = "<group>"; };
 		BC1CC5EBBC6CF7EE5916DC4423C49BAD /* LogApiClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LogApiClient.h; sourceTree = "<group>"; };
 		BC1D886EC6E108E30A77FEEFB42B8E7B /* Pods-SJTYNetWork_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SJTYNetWork_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		BD811C23DB7C51A5B8C53810CEB0DEA1 /* Pods-SJTYNetWork-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SJTYNetWork-dummy.m"; sourceTree = "<group>"; };
 		BF2F3D3BFFCF8FCEE682687573199B0F /* MJProperty.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJProperty.m; path = MJExtension/MJProperty.m; sourceTree = "<group>"; };
 		C2B58DA2D9E46677D800579855B09C6F /* NSObject+MJKeyValue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+MJKeyValue.m"; path = "MJExtension/NSObject+MJKeyValue.m"; sourceTree = "<group>"; };
-		C42A42507576700EFB5EC8D72002F191 /* AFNetworking-iOS11.0 */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "AFNetworking-iOS11.0"; path = "libAFNetworking-iOS11.0.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C42A42507576700EFB5EC8D72002F191 /* libAFNetworking-iOS11.0.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libAFNetworking-iOS11.0.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C482FDEABA4A569DE6055EE1E83BA386 /* NetWorkManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = NetWorkManager.m; sourceTree = "<group>"; };
 		C800A7851A8A5FA0C6803243508BF4BA /* Pods-SJTYNetWork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SJTYNetWork.release.xcconfig"; sourceTree = "<group>"; };
 		CA5390E94B831F69B7CCE440872B568D /* KnowledgeModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KnowledgeModel.m; sourceTree = "<group>"; };
-		CB11EBBC275C4653136CC65E25167203 /* SJTYLogManager-iOS12.0 */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "SJTYLogManager-iOS12.0"; path = "libSJTYLogManager-iOS12.0.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB11EBBC275C4653136CC65E25167203 /* libSJTYLogManager-iOS12.0.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libSJTYLogManager-iOS12.0.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE17B9477DBA990E40A6409CE6A3A7E0 /* AFAutoPurgingImageCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFAutoPurgingImageCache.h; path = "UIKit+AFNetworking/AFAutoPurgingImageCache.h"; sourceTree = "<group>"; };
 		CEA462638D7310062D55855E75BBC7B4 /* SJTYLogManager-iOS12.0.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "SJTYLogManager-iOS12.0.debug.xcconfig"; path = "../SJTYLogManager-iOS12.0/SJTYLogManager-iOS12.0.debug.xcconfig"; sourceTree = "<group>"; };
 		CF051B02A4F4E900FE7F78B4A04F6E73 /* UserApiClient.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = UserApiClient.m; sourceTree = "<group>"; };
@@ -456,7 +456,7 @@
 		D6ADE6D190FE742BFDAAA4D2081FAD37 /* UIKit+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIKit+AFNetworking.h"; path = "UIKit+AFNetworking/UIKit+AFNetworking.h"; sourceTree = "<group>"; };
 		D7C779A3CC56A8C2546B8F26718CB9C9 /* NetWorkManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = NetWorkManager.h; sourceTree = "<group>"; };
 		D7D2972964198B66EFF19134BE0CCDFE /* MJProperty.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJProperty.h; path = MJExtension/MJProperty.h; sourceTree = "<group>"; };
-		DBBBAEAAB41E74FCC52011E472AF6AF3 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		DBBBAEAAB41E74FCC52011E472AF6AF3 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		DC47DD69D599F50F4A70734FFFC83787 /* UIActivityIndicatorView+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIActivityIndicatorView+AFNetworking.m"; path = "UIKit+AFNetworking/UIActivityIndicatorView+AFNetworking.m"; sourceTree = "<group>"; };
 		DDEFF975F3EECAC51FE9579854DEDA68 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+AFNetworking.m"; path = "UIKit+AFNetworking/UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
 		E04EDE1503D4F2D4C9B2BB431FF6D857 /* OTAApiClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OTAApiClient.h; sourceTree = "<group>"; };
@@ -471,11 +471,11 @@
 		E9E01CE4DAB2C9BD6F8C0B572D9FA312 /* SJTYNetWork-iOS11.0.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "SJTYNetWork-iOS11.0.debug.xcconfig"; sourceTree = "<group>"; };
 		EB51D937638495294902639706E71DED /* SJTYNetWork-iOS12.0.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "SJTYNetWork-iOS12.0.release.xcconfig"; path = "../SJTYNetWork-iOS12.0/SJTYNetWork-iOS12.0.release.xcconfig"; sourceTree = "<group>"; };
 		F30A4EE7991F4555162361E923CD3A65 /* SJTYLogManager-iOS12.0-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "SJTYLogManager-iOS12.0-dummy.m"; path = "../SJTYLogManager-iOS12.0/SJTYLogManager-iOS12.0-dummy.m"; sourceTree = "<group>"; };
-		F3F3D4AAF353B8D12E2344EB2C5C8128 /* SJTYNetWork-iOS12.0 */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "SJTYNetWork-iOS12.0"; path = "libSJTYNetWork-iOS12.0.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3F3D4AAF353B8D12E2344EB2C5C8128 /* libSJTYNetWork-iOS12.0.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libSJTYNetWork-iOS12.0.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8FBBA4B26EF29998DCFE1EF4ECA33E6 /* MJFoundation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJFoundation.m; path = MJExtension/MJFoundation.m; sourceTree = "<group>"; };
 		F954698B8F0CC755951100F463D55C97 /* CommunityApiClient.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CommunityApiClient.m; sourceTree = "<group>"; };
 		FA4ADA48D159C7AC1158F9EB08609AD5 /* Pods-SJTYNetWork_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SJTYNetWork_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		FE8EA9561A0E506A008A6D5252F9F2A7 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		FE8EA9561A0E506A008A6D5252F9F2A7 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		FEACE66A1D502BC070E14C5737DE64BD /* ClientUserModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ClientUserModel.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -678,7 +678,6 @@
 				8AA1451804B7FB8EA145BD4FF6253119 /* SJTYLogManager.m */,
 				CD49FF0F78EF6C2B4BE816BAE9AA5C8C /* Support Files */,
 			);
-			name = SJTYLogManager;
 			path = SJTYLogManager;
 			sourceTree = "<group>";
 		};
@@ -727,16 +726,16 @@
 		7C8EAC52416713568B88BAC41EB5F7C3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C42A42507576700EFB5EC8D72002F191 /* AFNetworking-iOS11.0 */,
-				6A978DAC974D7083B4A300E403A77E99 /* AFNetworking-iOS12.0 */,
-				3CB281DEC0BB2F8766C1FF5F4CB68E8A /* MJExtension-iOS11.0 */,
-				6043D7776EFD81B160CC202D445B4920 /* MJExtension-iOS12.0 */,
-				1A4DAAFDE7DC53CA096635B1137F4BC8 /* Pods-SJTYNetWork */,
-				52AF2362A2C0EC733413A824ED6B8BA0 /* Pods-SJTYNetWork_Tests */,
-				B47A5ADB4CE1B9E8915B5183F2F0F994 /* SJTYLogManager-iOS11.0 */,
-				CB11EBBC275C4653136CC65E25167203 /* SJTYLogManager-iOS12.0 */,
-				2EC1C58FFD90AEDF3EA87EE4588E7F68 /* SJTYNetWork-iOS11.0 */,
-				F3F3D4AAF353B8D12E2344EB2C5C8128 /* SJTYNetWork-iOS12.0 */,
+				C42A42507576700EFB5EC8D72002F191 /* libAFNetworking-iOS11.0.a */,
+				6A978DAC974D7083B4A300E403A77E99 /* libAFNetworking-iOS12.0.a */,
+				3CB281DEC0BB2F8766C1FF5F4CB68E8A /* libMJExtension-iOS11.0.a */,
+				6043D7776EFD81B160CC202D445B4920 /* libMJExtension-iOS12.0.a */,
+				1A4DAAFDE7DC53CA096635B1137F4BC8 /* libPods-SJTYNetWork.a */,
+				52AF2362A2C0EC733413A824ED6B8BA0 /* libPods-SJTYNetWork_Tests.a */,
+				B47A5ADB4CE1B9E8915B5183F2F0F994 /* libSJTYLogManager-iOS11.0.a */,
+				CB11EBBC275C4653136CC65E25167203 /* libSJTYLogManager-iOS12.0.a */,
+				2EC1C58FFD90AEDF3EA87EE4588E7F68 /* libSJTYNetWork-iOS11.0.a */,
+				F3F3D4AAF353B8D12E2344EB2C5C8128 /* libSJTYNetWork-iOS12.0.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -826,7 +825,6 @@
 				1BF153426464E31BBFE743B5DA40ED5D /* NSString+MJExtension.m */,
 				794C03BB58B3C26760AA72E6B2773479 /* Support Files */,
 			);
-			name = MJExtension;
 			path = MJExtension;
 			sourceTree = "<group>";
 		};
@@ -864,7 +862,6 @@
 				5E0BECF8C8380663E63F8C1BF28866AA /* Support Files */,
 				0BB942380BAB62504082303A19FB44D3 /* UIKit */,
 			);
-			name = AFNetworking;
 			path = AFNetworking;
 			sourceTree = "<group>";
 		};
@@ -1110,7 +1107,7 @@
 			);
 			name = "SJTYNetWork-iOS11.0";
 			productName = "SJTYNetWork-iOS11.0";
-			productReference = 2EC1C58FFD90AEDF3EA87EE4588E7F68 /* SJTYNetWork-iOS11.0 */;
+			productReference = 2EC1C58FFD90AEDF3EA87EE4588E7F68 /* libSJTYNetWork-iOS11.0.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		23C086487CCC6647D7FD714BAE0C68F0 /* SJTYNetWork-iOS12.0 */ = {
@@ -1130,7 +1127,7 @@
 			);
 			name = "SJTYNetWork-iOS12.0";
 			productName = "SJTYNetWork-iOS12.0";
-			productReference = F3F3D4AAF353B8D12E2344EB2C5C8128 /* SJTYNetWork-iOS12.0 */;
+			productReference = F3F3D4AAF353B8D12E2344EB2C5C8128 /* libSJTYNetWork-iOS12.0.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		4D015687635002351A6DD4FB940959C5 /* AFNetworking-iOS11.0 */ = {
@@ -1147,7 +1144,7 @@
 			);
 			name = "AFNetworking-iOS11.0";
 			productName = "AFNetworking-iOS11.0";
-			productReference = C42A42507576700EFB5EC8D72002F191 /* AFNetworking-iOS11.0 */;
+			productReference = C42A42507576700EFB5EC8D72002F191 /* libAFNetworking-iOS11.0.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		620154C322E7616627091E299B420188 /* Pods-SJTYNetWork_Tests */ = {
@@ -1168,7 +1165,7 @@
 			);
 			name = "Pods-SJTYNetWork_Tests";
 			productName = "Pods-SJTYNetWork_Tests";
-			productReference = 52AF2362A2C0EC733413A824ED6B8BA0 /* Pods-SJTYNetWork_Tests */;
+			productReference = 52AF2362A2C0EC733413A824ED6B8BA0 /* libPods-SJTYNetWork_Tests.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		6D4BE23FF513D206A973FCB49E311A19 /* SJTYLogManager-iOS11.0 */ = {
@@ -1185,7 +1182,7 @@
 			);
 			name = "SJTYLogManager-iOS11.0";
 			productName = "SJTYLogManager-iOS11.0";
-			productReference = B47A5ADB4CE1B9E8915B5183F2F0F994 /* SJTYLogManager-iOS11.0 */;
+			productReference = B47A5ADB4CE1B9E8915B5183F2F0F994 /* libSJTYLogManager-iOS11.0.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		7097ECF214417C23510E23D8F688CCEF /* AFNetworking-iOS12.0 */ = {
@@ -1202,7 +1199,7 @@
 			);
 			name = "AFNetworking-iOS12.0";
 			productName = "AFNetworking-iOS12.0";
-			productReference = 6A978DAC974D7083B4A300E403A77E99 /* AFNetworking-iOS12.0 */;
+			productReference = 6A978DAC974D7083B4A300E403A77E99 /* libAFNetworking-iOS12.0.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		72D68B732ECA3FA3A68FB0F1A13805B9 /* Pods-SJTYNetWork */ = {
@@ -1223,7 +1220,7 @@
 			);
 			name = "Pods-SJTYNetWork";
 			productName = "Pods-SJTYNetWork";
-			productReference = 1A4DAAFDE7DC53CA096635B1137F4BC8 /* Pods-SJTYNetWork */;
+			productReference = 1A4DAAFDE7DC53CA096635B1137F4BC8 /* libPods-SJTYNetWork.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		80E073FF95F1B3DCB2585758504553F1 /* MJExtension-iOS12.0 */ = {
@@ -1240,7 +1237,7 @@
 			);
 			name = "MJExtension-iOS12.0";
 			productName = "MJExtension-iOS12.0";
-			productReference = 6043D7776EFD81B160CC202D445B4920 /* MJExtension-iOS12.0 */;
+			productReference = 6043D7776EFD81B160CC202D445B4920 /* libMJExtension-iOS12.0.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		AC5A917686E93B03EC212A37C0F5FD65 /* SJTYLogManager-iOS12.0 */ = {
@@ -1257,7 +1254,7 @@
 			);
 			name = "SJTYLogManager-iOS12.0";
 			productName = "SJTYLogManager-iOS12.0";
-			productReference = CB11EBBC275C4653136CC65E25167203 /* SJTYLogManager-iOS12.0 */;
+			productReference = CB11EBBC275C4653136CC65E25167203 /* libSJTYLogManager-iOS12.0.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		AFF16DC975ABF172B00B03854F926DB2 /* MJExtension-iOS11.0 */ = {
@@ -1274,7 +1271,7 @@
 			);
 			name = "MJExtension-iOS11.0";
 			productName = "MJExtension-iOS11.0";
-			productReference = 3CB281DEC0BB2F8766C1FF5F4CB68E8A /* MJExtension-iOS11.0 */;
+			productReference = 3CB281DEC0BB2F8766C1FF5F4CB68E8A /* libMJExtension-iOS11.0.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -1295,8 +1292,6 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			minimizedProjectReferenceProxies = 0;
-			preferredProjectObjectVersion = 77;
 			productRefGroup = 7C8EAC52416713568B88BAC41EB5F7C3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -1593,7 +1588,7 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_PREFIX_HEADER = "Target Support Files/SJTYLogManager-iOS11.0/SJTYLogManager-iOS11.0-prefix.pch";
 				GENERATE_INFOPLIST_FILE = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -1730,7 +1725,7 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_PREFIX_HEADER = "Target Support Files/SJTYLogManager-iOS11.0/SJTYLogManager-iOS11.0-prefix.pch";
 				GENERATE_INFOPLIST_FILE = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -1760,7 +1755,7 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_PREFIX_HEADER = "Target Support Files/SJTYLogManager-iOS12.0/SJTYLogManager-iOS12.0-prefix.pch";
 				GENERATE_INFOPLIST_FILE = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -1913,8 +1908,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
@@ -2051,7 +2045,7 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_PREFIX_HEADER = "Target Support Files/SJTYLogManager-iOS12.0/SJTYLogManager-iOS12.0-prefix.pch";
 				GENERATE_INFOPLIST_FILE = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
