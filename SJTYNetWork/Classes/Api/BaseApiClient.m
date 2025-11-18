@@ -12,7 +12,7 @@
 #import <CoreTelephony/CTCellularData.h>
 
 #import "SJTYBaseModel.h"
-#import "SJTYLogManager.h"
+#import <SJTYLogManager/SJTYLogManager.h>
 @interface BaseApiClient()
 
 @end

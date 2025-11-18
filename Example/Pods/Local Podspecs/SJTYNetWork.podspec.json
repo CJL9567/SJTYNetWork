@@ -1,6 +1,6 @@
 {
   "name": "SJTYNetWork",
-  "version": "1.0.29",
+  "version": "1.0.32",
   "summary": "A short description of SJTYNetWork.",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/CJL9567/SJTYNetWork",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/CJL9567/SJTYNetWork.git",
-    "tag": "1.0.29"
+    "tag": "1.0.32"
   },
   "platforms": {
     "ios": "9.0"
@@ -24,6 +24,9 @@
 
     ],
     "MJExtension": [
+
+    ],
+    "SJTYLogManager": [
 
     ]
   }

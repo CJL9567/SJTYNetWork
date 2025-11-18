@@ -1,4 +1,7 @@
 #use_frameworks!
+
+source 'https://github.com/CocoaPods/Specs.git'
+source 'https://github.com/CJL9567/SJTYLogManagerSpecs.git'
 target 'SJTYNetWork_Tests' do
   pod 'SJTYNetWork', :path => '../'
   

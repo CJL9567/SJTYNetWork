@@ -1,0 +1,1 @@
+../../../SJTYLogManager/SJTYLogManager/Classes/SJTYLogManager.h
