@@ -6,7 +6,7 @@
 //
 
 #import "BaseApiClient.h"
-
+#import "SJTYSeessionUtil.h"
 #import <AFNetworking/AFNetworking.h>
 #import <MJExtension/MJExtension.h>
 #import <CoreTelephony/CTCellularData.h>
@@ -64,6 +64,12 @@ static BaseApiClient *apiClient;
     if (cookieStr!=nil) {
         [manager.requestSerializer setValue:cookieStr forHTTPHeaderField:@"Cookie"];
     }
+    
+    NSString *token = [SJTYSeessionUtil getToken];
+    if (token !=nil && ![token isEqualToString:@""] ) {
+        [manager.requestSerializer setValue:token forHTTPHeaderField:TOKEN_HEADER_KEY];
+    }
+    
     NSString *host=nil;
     if (self.host==nil||[self.host isEqualToString:@""]) {
         host=Host;
@@ -145,6 +151,12 @@ static BaseApiClient *apiClient;
     if (cookieStr!=nil) {
         [manager.requestSerializer setValue:cookieStr forHTTPHeaderField:@"Cookie"];
     }
+    
+    NSString *token = [SJTYSeessionUtil getToken];
+    if (token !=nil && ![token isEqualToString:@""] ) {
+        [manager.requestSerializer setValue:token forHTTPHeaderField:TOKEN_HEADER_KEY];
+    }
+    
     NSString *host=nil;
     if (self.host==nil||[self.host isEqualToString:@""]) {
         host=Host;
@@ -170,7 +182,13 @@ static BaseApiClient *apiClient;
         NSString *logResponseObject= [NSString stringWithFormat:@"responseObject :%@",responseObject];
         
         SJTYLog(LogLevelInfo,logResponseObject);
-
+        NSHTTPURLResponse *httpURLResponse = (NSHTTPURLResponse*)task.response;
+        NSDictionary *dictTTTTTEMP = httpURLResponse.allHeaderFields;
+        NSString *seesion=[[dictTTTTTEMP valueForKey:@"Cookie"] substringFromIndex:9];
+        if (seesion!=nil) {
+            [[NSUserDefaults standardUserDefaults] setValue:seesion forKey:@"Cookie"];
+            [[NSUserDefaults standardUserDefaults] synchronize];
+        }
         NSError *error=nil;
         SJTYResponse *response= [SJTYResponse mj_objectWithKeyValues:responseObject];
         if (request.mapClass&&request.responseMapClass) {
@@ -220,6 +238,12 @@ static BaseApiClient *apiClient;
     if (cookieStr!=nil) {
         [manager.requestSerializer setValue:cookieStr forHTTPHeaderField:@"Cookie"];
     }
+    
+    NSString *token = [SJTYSeessionUtil getToken];
+    if (token !=nil && ![token isEqualToString:@""] ) {
+        [manager.requestSerializer setValue:token forHTTPHeaderField:TOKEN_HEADER_KEY];
+    }
+    
     NSString *host=nil;
     if (self.host==nil||[self.host isEqualToString:@""]) {
         host=Host;
@@ -239,6 +263,13 @@ static BaseApiClient *apiClient;
     
     [manager PUT:[NSString stringWithFormat:@"%@%@",host,[request.apiUrl stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet  URLQueryAllowedCharacterSet]]] parameters:request.params headers:@{} success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
+        NSHTTPURLResponse *httpURLResponse = (NSHTTPURLResponse*)task.response;
+        NSDictionary *dictTTTTTEMP = httpURLResponse.allHeaderFields;
+        NSString *seesion=[[dictTTTTTEMP valueForKey:@"Cookie"] substringFromIndex:9];
+        if (seesion!=nil) {
+            [[NSUserDefaults standardUserDefaults] setValue:seesion forKey:@"Cookie"];
+            [[NSUserDefaults standardUserDefaults] synchronize];
+        }
         
         NSError *error=nil;
         SJTYResponse *response= [SJTYResponse mj_objectWithKeyValues:responseObject];
@@ -288,6 +319,12 @@ static BaseApiClient *apiClient;
     if (cookieStr!=nil) {
         [manager.requestSerializer setValue:cookieStr forHTTPHeaderField:@"Cookie"];
     }
+    
+    NSString *token = [SJTYSeessionUtil getToken];
+    if (token !=nil && ![token isEqualToString:@""] ) {
+        [manager.requestSerializer setValue:token forHTTPHeaderField:TOKEN_HEADER_KEY];
+    }
+    
     NSString *host=nil;
     if (self.host==nil||[self.host isEqualToString:@""]) {
         host=Host;
@@ -324,6 +361,15 @@ static BaseApiClient *apiClient;
     } progress:^(NSProgress * _Nonnull uploadProgress) {
         progressHandler(uploadProgress);
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        NSHTTPURLResponse *httpURLResponse = (NSHTTPURLResponse*)task.response;
+        NSDictionary *dictTTTTTEMP = httpURLResponse.allHeaderFields;
+        NSString *seesion=[[dictTTTTTEMP valueForKey:@"Cookie"] substringFromIndex:9];
+        if (seesion!=nil) {
+            [[NSUserDefaults standardUserDefaults] setValue:seesion forKey:@"Cookie"];
+            [[NSUserDefaults standardUserDefaults] synchronize];
+        }
+        
         NSString *logResponseObject= [NSString stringWithFormat:@"responseObject :%@",responseObject];
         
         SJTYLog(LogLevelInfo,logResponseObject);
@@ -357,6 +403,12 @@ static BaseApiClient *apiClient;
     if (cookieStr!=nil) {
         [manager.requestSerializer setValue:cookieStr forHTTPHeaderField:@"Cookie"];
     }
+    
+    NSString *token = [SJTYSeessionUtil getToken];
+    if (token !=nil && ![token isEqualToString:@""] ) {
+        [manager.requestSerializer setValue:token forHTTPHeaderField:TOKEN_HEADER_KEY];
+    }
+    
     NSString *host=nil;
     if (self.host==nil||[self.host isEqualToString:@""]) {
         host=Host;

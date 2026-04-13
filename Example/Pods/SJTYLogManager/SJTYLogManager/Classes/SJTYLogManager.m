@@ -70,9 +70,9 @@ static SJTYLogManager *sharedInstance = nil;
         // 创建文件夹(包括可能需要的中间目录)
         NSError *error = nil;
         BOOL success = [fileManager createDirectoryAtPath:logDirPath
-                                  withIntermediateDirectories:YES
-                                                   attributes:nil
-                                                        error:&error];
+                              withIntermediateDirectories:YES
+                                               attributes:nil
+                                                    error:&error];
         if (!success) {
             NSLog(@"创建Log文件夹失败: %@", error.localizedDescription);
         }
@@ -133,26 +133,24 @@ static SJTYLogManager *sharedInstance = nil;
     
     // 将日志写入文件（追加模式）
     @synchronized(self) {
-        // 先读取已有内容
-        NSMutableString *fileContent = [NSMutableString stringWithContentsOfFile:filePath
-                                                                       encoding:NSUTF8StringEncoding
-                                                                          error:nil];
-        if (!fileContent) {
-            fileContent = [NSMutableString string];
+        // 确保文件存在（如果不存在则创建空文件）
+        if (![[NSFileManager defaultManager] fileExistsAtPath:filePath]) {
+            [[NSData data] writeToFile:filePath atomically:YES];
         }
         
-        // 追加新内容
-        [fileContent appendString:logString];
-        
-        // 写入文件
-        NSError *error = nil;
-        BOOL success = [fileContent writeToFile:filePath
-                                    atomically:YES
-                                      encoding:NSUTF8StringEncoding
-                                         error:&error];
-        
-        if (!success) {
-            NSLog(@"日志写入失败: %@", error.localizedDescription);
+        NSFileHandle *fileHandle = [NSFileHandle fileHandleForWritingAtPath:filePath];
+        if (fileHandle) {
+            [fileHandle seekToEndOfFile];                     // 移到文件末尾
+            NSData *data = [logString dataUsingEncoding:NSUTF8StringEncoding];
+            [fileHandle writeData:data];                      // 追加写入
+            [fileHandle closeFile];                           // 关闭句柄
+        } else {
+            // 降级方案：如果无法获取句柄（如权限问题），可以尝试直接写入
+            NSData *data = [logString dataUsingEncoding:NSUTF8StringEncoding];
+            NSFileHandle *outputHandle = [NSFileHandle fileHandleForWritingAtPath:filePath];
+            [outputHandle seekToEndOfFile];
+            [outputHandle writeData:data];
+            [outputHandle closeFile];
         }
     }
 }
@@ -204,7 +202,7 @@ static SJTYLogManager *sharedInstance = nil;
     
     return [logFilePaths copy];
 }
-                  
+
 
 /// 获取日志文件路径
 /// - Parameter date: 日志时间
@@ -236,5 +234,5 @@ static SJTYLogManager *sharedInstance = nil;
     return nil;
     
 }
-                  
+
 @end

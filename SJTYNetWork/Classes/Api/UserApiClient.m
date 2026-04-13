@@ -6,8 +6,8 @@
 //
 
 #import "UserApiClient.h"
-
-
+#import "SJTYTokenTransformation.h"
+#import "SJTYSeessionUtil.h"
 @interface UserApiClient ()
 
 @end
@@ -315,6 +315,39 @@
 }
 
 
+
++(Boolean)tuyaToSjty:(NSString * _Nonnull)uid nickName:(NSString * _Nonnull)nickName contactKey:(NSString * _Nonnull)contactKey portrait:(NSString * _Nonnull)portrait productId:(NSString * _Nonnull)productId{
+    if (uid == nil) {
+        return NO;
+    }
+    
+    if (uid.length < 20) {
+        return NO;
+    }
+    
+    NSString *token = [SJTYTokenTransformation creatToenByTuya:uid nickName:nickName contactKey:contactKey portrait:portrait productId:productId];
+    
+    [SJTYSeessionUtil remove];
+    [SJTYSeessionUtil saveToken:token];
+    
+    return YES;
+}
+
+
+
++(Boolean)rainmakerToSjty:(NSString *)rainMakerToken productId:(NSString * _Nonnull)productId{
+    
+    if (rainMakerToken == nil) {
+        return NO;
+    }
+    NSString *token =  [SJTYTokenTransformation creatTokenByRainMaker:[SJTYTokenTransformation analiysisRainMakerToken:rainMakerToken productId:productId]];
+    
+    [SJTYSeessionUtil remove];
+    [SJTYSeessionUtil saveToken:token];
+    
+    return YES;
+    
+}
 
 
 

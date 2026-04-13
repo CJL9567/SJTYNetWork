@@ -7,7 +7,6 @@
 //
 
 @import XCTest;
-
 #import <SJTYNetWork/NetWorkManager.h>
 #import <SJTYNetWork/UserApiClient.h>
 #import <SJTYNetWork/AppApiClient.h>
@@ -34,13 +33,15 @@
 
 - (void)testExample
 {
-    OTAApiClient *otaClient = [[OTAApiClient alloc] init];
-    otaClient.prodcutID =@"1650324943902347265";
-    [otaClient apiOTAApiQueryListWithProductSub:@"景观灯" queryPublish:false responseHandler:^(NSError * _Nullable error, SJTYResponse * _Nullable response) {
-        if(response.status==200){
-            
-        }
-    }];
+    
+    
+//    OTAApiClient *otaClient = [[OTAApiClient alloc] init];
+//    otaClient.prodcutID =@"1650324943902347265";
+//    [otaClient apiOTAApiQueryListWithProductSub:@"景观灯" queryPublish:false responseHandler:^(NSError * _Nullable error, SJTYResponse * _Nullable response) {
+//        if(response.status==200){
+//            
+//        }
+//    }];
 //    AppApiClient *apiClient=[[AppApiClient alloc] init];
 //    apiClient.prodcutID=@"1523949849220091906";
 //    [apiClient apiAppEnable:@"1" responseHandler:^(NSError * _Nullable error, SJTYResponse * _Nullable response) {

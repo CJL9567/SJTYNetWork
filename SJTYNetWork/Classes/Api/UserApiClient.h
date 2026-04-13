@@ -126,4 +126,19 @@
 
 
 
+/// 涂鸦登陆后台
+/// @param uid 用户ID userId
+/// @param nickName 昵称
+/// @param contactKey 账号
+/// @param portrait 头像
+/// @param productId 产品ID
++(Boolean)tuyaToSjty:(NSString * _Nonnull)uid nickName:(NSString * _Nonnull)nickName contactKey:(NSString * _Nonnull)contactKey portrait:(NSString * _Nonnull)portrait productId:(NSString * _Nonnull)productId;
+
+
+/// Rainmaker登陆后台
+/// @param rainMakerToken token
+/// @param productId 产品ID
++(Boolean)rainmakerToSjty:(NSString *_Nonnull)rainMakerToken productId:(NSString * _Nonnull)productId;
+
+
 @end

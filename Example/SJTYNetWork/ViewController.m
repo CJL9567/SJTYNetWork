@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 #import <SJTYNetwork.h>
+
+#import <SJTYNetWork/SJTYTokenTransformation.h>
 @interface ViewController ()
 
 @end
@@ -26,10 +28,12 @@
 //    }];
 //    SJTYLogManager *logManager=[SJTYLogManager sharedInstance];
     
-    AppApiClient *appClient = [[AppApiClient alloc] init];
-    [appClient apiAppDistrictByLatLng:@"27.866636" lng:@"-112.908065" responseHandler:^(NSError * _Nullable error, SJTYResponse * _Nullable response) {
-        NSLog(@"");
-    }];
+//    AppApiClient *appClient = [[AppApiClient alloc] init];
+//    [appClient apiAppDistrictByLatLng:@"27.866636" lng:@"-112.908065" responseHandler:^(NSError * _Nullable error, SJTYResponse * _Nullable response) {
+//        NSLog(@"");
+//    }];
+    
+    [SJTYTokenTransformation creatToenByTuya:@"89999999999999999" nickName:@"nikename" contactKey:@"999@ee.com" portrait:@"http://www.fff.com/dafd.jpg" productId:888];
 }
 
 

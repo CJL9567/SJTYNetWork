@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SJTYNetWork'
-  s.version          = '1.0.36'
+  s.version          = '1.0.37'
   s.summary          = 'A short description of SJTYNetWork.'
   
 # This description is used to generate tags and improve search results.
@@ -41,4 +41,6 @@ TODO: Add long description of the pod here.
    s.dependency 'AFNetworking'
    s.dependency 'MJExtension'
    s.dependency 'SJTYLogManager'
+   s.dependency 'JWT','3.0.0-beta.14'
+
 end
