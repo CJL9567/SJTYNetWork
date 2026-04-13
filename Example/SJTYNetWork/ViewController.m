@@ -33,7 +33,7 @@
 //        NSLog(@"");
 //    }];
     
-    [SJTYTokenTransformation creatToenByTuya:@"89999999999999999" nickName:@"nikename" contactKey:@"999@ee.com" portrait:@"http://www.fff.com/dafd.jpg" productId:888];
+//    [SJTYTokenTransformation creatToenByTuya:@"89999999999999999" nickName:@"nikename" contactKey:@"999@ee.com" portrait:@"http://www.fff.com/dafd.jpg" productId:888];
 }
 
 

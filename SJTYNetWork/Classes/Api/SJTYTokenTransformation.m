@@ -6,7 +6,9 @@
 //
 
 #import "SJTYTokenTransformation.h"
-#import <JWT.h>
+#import <JWT/JWT.h>
+
+
 @implementation SJTYTokenTransformation
 
 +(NSString *)creatToenByTuya:(NSString *)uid nickName:(NSString *)nickName contactKey:(NSString *)contactKey portrait:(NSString *)portrait productId:(NSString *)productId{
@@ -45,7 +47,7 @@
 
 
 
-+(NSString *)creatToKenByRainMaker:(RainMakerToken *)token{
++(NSString *)creatTokenByRainMaker:(RainMakerToken *)token{
     
     NSRange lastSlashRange = [token.iss rangeOfString:@"/" options:NSBackwardsSearch];
     
