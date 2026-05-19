@@ -1,9 +1,3 @@
-//
-//  JWT.h
-//  Pods
-//
-//  Created by sjty on 2026/5/19.
-//
 
 
 // Coding

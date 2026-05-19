@@ -19,6 +19,7 @@
 #import "OTAModel.h"
 #import "SJTYRequest.h"
 #import "SJTYResponse.h"
+
 #endif /* SJTYNetwork_h */
 
 
