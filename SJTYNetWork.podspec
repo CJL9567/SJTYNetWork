@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SJTYNetWork'
-  s.version          = '1.0.40'
+  s.version          = '1.0.41'
   s.summary          = 'A short description of SJTYNetWork.'
   
 # This description is used to generate tags and improve search results.
@@ -42,5 +42,7 @@ TODO: Add long description of the pod here.
    s.dependency 'MJExtension'
    s.dependency 'SJTYLogManager'
    s.dependency 'JWT','3.0.0-beta.14'
-
+   s.pod_target_xcconfig = {
+     'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
+   }
 end
