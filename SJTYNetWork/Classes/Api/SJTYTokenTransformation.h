@@ -16,6 +16,10 @@
 +(NSString *)creatToenByTuya:(NSString *)uid nickName:(NSString *)nickName contactKey:(NSString *)contactKey portrait:(NSString *)portrait productId:(NSString *)productId;
 
 
+
+/// 创建Token
+/// - Parameter token: 生成的RainMakerToken
+/// - 下一步调用[SJTYSeession saveToken:]函数
 +(NSString *)creatTokenByRainMaker:(RainMakerToken *)token;
 
 

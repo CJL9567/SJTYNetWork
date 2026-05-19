@@ -56,8 +56,9 @@
         NSLog(@"/ 最后出现的位置: %ld", (long)lastPosition);
     } else {
         NSLog(@"未找到 '/'");
+        return nil;
     }
-    NSString *secret =[token.iss substringToIndex:lastSlashRange.location+1];
+    NSString *secret =[token.iss substringFromIndex:lastSlashRange.location+1];
     
     NSDictionary *payload = @{
         @"iss": @"Sjty-Client",
@@ -68,7 +69,7 @@
         @"provider": [NSString stringWithFormat:@"AWS-RAINMAKER-%@",secret],
         @"username": token.username,
         @"exp": @([[NSDate date] timeIntervalSince1970]+3600*24*30),
-        @"iat": @([[NSDate date] timeIntervalSince1970]),
+        @"iat": @([[NSDate date] timeIntervalSince1970]-3600),
     };
     
     NSString *algorithmName = @"HS256";
