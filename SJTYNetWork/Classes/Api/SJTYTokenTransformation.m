@@ -6,8 +6,7 @@
 //
 
 #import "SJTYTokenTransformation.h"
-#import <JWT/JWT.h>
-
+#import "JWT.h"
 
 @implementation SJTYTokenTransformation
 
