@@ -6,6 +6,7 @@
 //
 
 #import "SJTYJWT.h"
+#import <CommonCrypto/CommonHMAC.h>
 
 @implementation SJTYJWT
 
