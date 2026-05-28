@@ -29,7 +29,10 @@
 }
 
 + (NSString *)getToken{
-   NSString *token= [NSString stringWithFormat:@"%@%@",TOKEN_PREFIX,[[NSUserDefaults standardUserDefaults] objectForKey:sp_key_token]];
+    if ([[NSUserDefaults standardUserDefaults] objectForKey:sp_key_token] ==nil) {
+        return nil;
+    }
+    NSString *token= [NSString stringWithFormat:@"%@%@",TOKEN_PREFIX,[[NSUserDefaults standardUserDefaults] objectForKey:sp_key_token]];
     return token;
 }
 
