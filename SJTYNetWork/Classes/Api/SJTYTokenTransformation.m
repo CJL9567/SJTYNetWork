@@ -6,7 +6,7 @@
 //
 
 #import "SJTYTokenTransformation.h"
-#import "JWT.h"
+#import "SJTYJWT.h"
 
 @implementation SJTYTokenTransformation
 
@@ -31,14 +31,7 @@
         @"iat": @([[NSDate date] timeIntervalSince1970]),
     };
     
-    NSString *algorithmName = @"HS256";
-    
-    // 3. 使用 JWTBuilder 进行编码
-    JWTBuilder *builder = [JWTBuilder encodePayload:payload];
-    builder.secret(secret);
-    builder.algorithmName(algorithmName);
-    // 4. 获取最终的 JWT 字符串
-    NSString *jwtString = builder.encode;
+    NSString *jwtString = [SJTYJWT jwtHS256WithPayload:payload secret:secret];
     
     
     return jwtString;
@@ -71,14 +64,7 @@
         @"iat": @([[NSDate date] timeIntervalSince1970]-3600),
     };
     
-    NSString *algorithmName = @"HS256";
-    
-    // 3. 使用 JWTBuilder 进行编码
-    JWTBuilder *builder = [JWTBuilder encodePayload:payload];
-    builder.secret(secret);
-    builder.algorithmName(algorithmName);
-    // 4. 获取最终的 JWT 字符串
-    NSString *jwtString = builder.encode;
+    NSString *jwtString = [SJTYJWT jwtHS256WithPayload:payload secret:secret];
     
     
     return jwtString;
